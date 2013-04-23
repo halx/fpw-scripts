@@ -1,0 +1,106 @@
+#!/usr/bin/perl -w
+#
+# Convert bdf fonts to a number of XBM bitmaps.
+# Usage: bdf2xbm.pl [-verbose] [-png] < input.bdf
+# Output files "0.xbm", ..., "FF.xbm" etc. are created in current directory.
+# Optionally convert to PNG, then the XBM files are deleted. Need "xbmtopbm" and "pnmtopng" for PNG output.
+# Limitations: produces incorrect spacing if char bitmap bounding box is not left-aligned to byte boundary
+# Author: Serge Winitzki. http://www.linuxstart.com/~winitzki/
+# corrections by Hannes Loeffler http://www.hloeffler.info/
+# Script is in public domain. Version 1.0
+
+%hexrev = (
+	   "0" => "0",
+	   "1" => "8",
+	   "2" => "4",
+	   "3" => "C",
+	   "4" => "2",
+	   "5" => "A",
+	   "6" => "6",
+	   "7" => "E",
+	   "8" => "1",
+	   "9" => "9",
+	   "A" => "5",
+	   "B" => "D",
+	   "C" => "3",
+	   "D" => "B",
+	   "E" => "7",
+	   "F" => "F",
+	  );
+
+$verbose = ("@ARGV" =~ /-verbose/i) ? 1 : 0;
+$wantpng = ("@ARGV" =~ /-png/i) ? 1 : 0;
+
+
+while (<>) {
+  if (/^FONTBOUNDINGBOX\s/) {
+    ($i, $i, $fheight, $i, $fbby) = split;
+  }
+
+  last if (/^CHARS\s/);
+}
+
+while (<>) {
+  if (/^ENCODING\s([0-9]*)$/) {
+    $charcode = sprintf("%X", $1);
+    $filename = "$charcode.xbm";
+    open(XBM, ">$filename");
+  } elsif (/^ENDCHAR/) {
+    print XBM "};";
+    close XBM;
+    if ($wantpng) {
+      # Convert to PNG
+      system("xbmtopbm < $filename | pnmtopng -transparent 0,0,0 > $charcode.png && rm $filename");
+      print "Writing file '$charcode.png'\n" if ($verbose);
+    } else {
+      print "Writing file '$filename'\n" if ($verbose);
+    }
+  } elsif (/^DWIDTH\s([0-9]*)\s/) {
+    $dwidth = $1;
+    $linelength = int( ($dwidth + 7) / 8); # Number of bytes needed to represent each line of the image
+  } elsif (/^BBX\s/) {
+    # Don't print the BBX yet, wait until we read the whole bitmap
+    ($i, $i, $height, $i, $bby) = split;
+
+    # Print XBM header
+    print XBM << "E1";
+#define noname_width $dwidth
+#define noname_height $fheight
+static char noname_bits[] = {
+E1
+    # Print a number of empty lines if necessary
+    #$skip = ($fbby + $fheight) - ($bby + $height);
+
+    #if ($skip > 0) {
+    #  print XBM ( ("0x00," x $linelength) . "\n") x $skip;
+    #}
+  } elsif (/^BITMAP/) {
+    # Read the bitmap and print the reversed bytes
+    for ($i = 0; $i < $height; $i++) {
+      $line = <>;
+      chomp $line;
+      $line .= "0000";	# Just in case we need more padding
+
+      # Loop over bytes in line and print reversed bitmap
+      for ($j = 0; $j < $linelength; $j++) {
+	$c1 = substr($line, $j*2+1, 1);
+	$c0 = substr($line, $j*2, 1);
+	$c1 = uc("$c1");
+	$c0 = uc("$c0");
+	print XBM "0x" . $hexrev{"$c1"} . $hexrev{"$c0"} . ", ";
+      }
+
+      print XBM "\n";
+    }
+
+    # Print some empty lines
+    $skip = $bby - $fbby;
+
+    if ($skip > 0) {
+      print XBM (("0x00, " x $linelength) . "\n") x $skip;
+    }
+
+  } elsif (/^ENDFONT/) {
+    last;
+  }
+}

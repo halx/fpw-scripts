@@ -1,0 +1,30 @@
+#!/usr/bin/perl
+
+use strict;
+
+my $bmtoa = "/usr/X11R6/bin/bmtoa";
+
+my $size = "8X16";
+my $cnt = 0xB000;
+
+
+print "<?xml version=\"1.0\" encoding=\"Shift_JIS\"?>\n";
+print "<gaijiData xml:space=\"preserve\">\n";
+printf "<fontSet size=\"$size\" start=\"%X\">\n", $cnt;
+
+foreach my $file (<*.xbm>) {
+  open XBM, "$bmtoa $file |" or die "opening $file failed\n";
+
+  printf "<fontData ebcode=\"%X\">\n", $cnt;
+
+  while (<XBM>) {
+    chomp;
+    s/-/ /g;
+    print "$_\n";
+  }
+
+  print "</fontData>\n";
+  $cnt++;
+}
+
+print "</fontSet>\n</gaijiData>\n";

@@ -1,0 +1,12 @@
+In order to obtain bitmaps for each character from a TTF font do the following.
+
+1) Convert with e.g. otf2bdf or ttf2bdf:
+
+   e.g. otf2bdf -o kochi.bdf -p 64 kochi-mincho-subst.ttf
+
+2) Change the encoding to JIS X 0208 with e.g. FontForge (formerly pfaEdit)
+
+3) extract bitmap characters with bdf2xbm (note: complains a lot in the current
+   form but output is ok), file names according to JIS X 0208 encoding
+
+4) convert from XBM to BMP with ImageMagicks's convert

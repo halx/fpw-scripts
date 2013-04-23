@@ -1,4 +1,4 @@
 # cron job for the FreePWING conversions
 #
 # m h dom mon dow  command
-03 18   *   *   5  $HOME/fpw-scripts/convert-all.sh > $HOME/fpw-convert.log 2> $HOME/fpw-convert.err
+03 18   *   *   5  $HOME/fpw-scripts/convert-all.sh > $HOME/fpw-convert.log 2>&1

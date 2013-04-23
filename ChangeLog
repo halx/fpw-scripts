@@ -1,6 +1,10 @@
-2011-01-04 Hannes Loeffler <hal@hloeffler.info>
+2013-04-23 Hannes Loeffler <Hannes.Loeffler@gmail.com>
 
-* fpw-scipts1.0.0
+* now hosted on http://code.google.com/p/fpw-scripts/
+
+2011-01-04 Hannes Loeffler <Hannes.Loeffler@gmail.com>
+
+* fpw-scripts1.0.0
 * unified build system
 * some changes in the scripts
 

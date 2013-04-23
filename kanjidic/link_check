@@ -1,0 +1,43 @@
+#!/usr/bin/perl
+
+
+use PerlIO::gzip;
+
+my $xref_codes = qr/J[01]|DR|N|I/;
+
+
+open DF, "<:gzip", "data/kanjidic.gz" or die;
+
+while (<DF>) {
+
+  next if /^#/;
+  next if /^\s*$/;
+  chomp;
+
+  if (/(.*?){(.*)/) {
+    $head = $1;
+
+    foreach my $entry (split ' ', $head) {
+      if ($entry =~ /^(\d|DR|N|I\d)/) {
+        $code{$entry} = 1;
+      }
+
+      if ($entry =~ /^X/) {
+        $entry =~ s/^(XJ[01]|X)//;
+        $refs{$entry} = 1;
+      }
+    }
+  }
+}
+
+foreach $k (keys %refs) {
+  $found = 0;
+
+  foreach $k2 (keys %code) {
+    $found = 1 if $k eq $k2;
+  }
+
+  if (!$found) {
+    print "$k\n";
+  }
+}

@@ -1,0 +1,39 @@
+
+KanjiDic in EPWING format - Version @VERSION@
+
+This is a conversion of Jim Breen's KanjiDic [1] (6.355 JIS X 0208-1990 kanji) converted to JIS X 4081 format (an EPWING subset [2]) by Hannes Loeffler (hal@hloeffler.info).  The code of the conversion script is based on work by Kazuhiko Shiozaki [3] using the FreePWING library [4].  German version by Hans-Joerg Bibiko [5], Spanish version (2.280 kanji translated, English otherwise) by Francisco Gutierrez, and Portuguese version (the 1.945 Jouyou kanji translated) by Wladimir Mendes de Carvalho.  The kanji gaiji have been created from the jiskan16-1990 BDF font.  The large kanji bitmaps have been created from the Kochi Mincho substitute font.
+
+The dictionary may be searched by kanji, kana, translation, Chinese and Korean readings, kanji dictionary indexes, and JIS and Unicode text encodings (see <ref target="M2">INFORMATION FIELDS</ref>).  Conditional search (keyword search) is available for all readings together with <ref target="M5">component elements</ref> (but see notice below), and keys starting with B, C, G, N, P, S and DR (see <ref target="M2">INFORMATION FIELDS</ref>).
+
+The readings are in the order On-Yomi (katakana), Kun-Yomi (hiragana), Nanori (hiragana) marked with N, radical name marked with R, Chinese reading (pinyin) marked with C, and Korean reading (romanized) marked with K.  The white down triangle marks kanji variants, the white circle marks the dictionary codes (see <ref target="M2">INFORMATION FIELDS</ref>), and the white star the kanji components.
+
+Please note that the <ref target="M5">249 radicals/component elements</ref> identify kanji by their visual appearance of the elements and not the <ref target="M4">214 classical radicals</ref>.  Some of them are not representable by JIS X 0208 (*,#).  These radicals/component elements are displayed by gaiji but searches must be done according to the following table.
+
+(*) radical is top part: Ð¤ Öõ ¾° çè Ï· Çã
+    radical is right part: ´¢ Ë® Å©
+    radical is bottom part: Û¿ ã»
+    radical is left part: ²½ Ë» Ù© ½Á ÈÈ ïô Îé ½é
+    radical is top-left part: áË
+    radical is bottom-left part: ¹þ
+(#) only visual representation, real radical is different character:
+    ¡Ã(fullwidth vertical line) and katakana ¥Î ¥Ï ¥Þ ¥æ ¥è
+
+
+Search examples (search keys in quotes):
+
+by kanji: "¾å"
+by reading: "¤±¤ó", "¥±¥ó", "jian3" (Chinese), "gweon" (Korean)
+by stroke count: "S11"
+by frequency: "F350"
+by Jouyou level: "G4"
+by encoding: "366B" (JIS), "U77e9" (Unicode)
+by dictionary/query code: "N793", "H3301", "I2q5.3", "MP11.0024", etc.
+by keyword search: "¤±¤ó S12", "¤½¤¦ cao2", "¤¯ B18", "¥¨¥ó g6 s8 yan4", etc.
+by component elements (keyword search): "ÑÄ ½½ ´³ ¸¤", "ÑÌ ¸ý ÅÚ", etc.
+
+---
+[1] http://www.csse.monash.edu.au/~jwb/kanjidic.html
+[2] http://www.epwing.or.jp/
+[3] http://openlab.ring.gr.jp/edict/
+[4] http://www.sra.co.jp/people/m-kasahr/freepwing/
+[5] http://www.bibiko.de/kanji/

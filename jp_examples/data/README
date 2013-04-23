@@ -1,0 +1,124 @@
+This is a conversion of the example sentences (Feb 26, 2006) found at Jim Breen's web site[1] to JIS X 4081 format (an EPWING subset[2]) by Hannes Loeffler <hal@hloeffler.info>.  The code of the conversion script is based on work by Kazuhiko Shiozaki[3] using the FreePWING library[4].  Currently the dictionary is indexed by kanji and kana, the latter automatically generated  with kakasi[5].  WARNING: the kanji to kana conversion is not necessarily unique and false readings therefore quite possible!  Please check a dictionary for correct readings and perform look-ups prefereably by kanji (where applicable).
+
+
+The Tanaka Corpus:
+==================
+
+Introduction
+
+The page provides some brief documentation for the Tanaka Corpus of parallel Japanese-English sentences, and in particular the modification and editing that has been carried out to enable use of the corpus as a source of examples in the WWWJDIC dictionary server and other systems.
+
+The corpus was compiled by Professor Yasuhito Tanaka at Hyogo University and his students, as described in his Pacling2001 paper[6]. At Pacling2001 Professor Tanaka released copies of the corpus, and stated that it is in the public domain. According to Professor Christian Boitet, Professor Tanaka did not think the collection was a very good standard. (Sadly, Prof. Tanaka died in early 2003.)
+
+
+Compilation
+
+Professor Tanaka's students were given the task of collecting 300 sentence pairs each. After several years, 212,000 sentence pairs had been collected
+
+From inspection, it appears that many of the sentence pairs have been derived from textbooks, e.g. books used by Japanese students of English. Some are lines of songs, others are from popular books and Biblical passages.
+
+The original collection contained large numbers of errors, both in the Japanese and English. Many of the errors were in spelling and transcription, although in a significant number of cases the Japanese and English contained grammatical, syntactic, etc. errors, or the translations did not match at all.
+
+The original file can still be downloaded (see below.)
+
+
+Modifications to the Corpus
+
+As described below, the Tanaka Corpus has been edited and adapted to be used within the WWWJDIC dictionary server[7] as a set of example sentences associated with words in the dictionary. In order to adapt the corpus for this role, it has been edited as follows:
+
+   1. an initial regularization of the punctuation of the Japanese and English sentences was carried out, then duplicate pairs were removed, reducing the original file from 210,000 pairs to 180,000 pairs;
+   2. sentences which differed only by differences in orthography (e.g. kana/kanji usage, okurigana differences), numbers, proper names, minor grammatical points such as plain/polite verb usage, etc. were reduced to single representative examples;
+   3. sentences where the Japanese consisted of a short Japanese statement in kana were removed;
+   4. sentences with spelling errors, kana-kanji conversion errors, etc. were corrected;
+   5. sentences where the English version did not match the Japanese were edited to make the two versions agree;
+   6. where the sentences contain gender-specific language or words, the English portion has been tagged with [M] or [F] respectively;
+   7. sentences where the Japanese was too garbled to derive a valid English equivalent were removed.
+
+The process described above is ongoing, and at present the edited corpus has just over 160,000 sentence pairs.
+
+In addition a small number of additional sentence pairs have been added to provided examples of the usage of Japanese words and phrases not present in the original corpus.
+
+
+Incorporation into the WWWJDIC Server
+
+(The incorporation of the Tanaka Corpus in the WWWJDIC server is described in a paper presented to the 2003 Papillon workshop[8].)
+
+In order to facilitate the linking of sentences in the Corpus to words in the online dictionary, a list of Japanese words and phrases was extracted from each sentence. This was carried out using the Chasen morphological analysis program. Compound words which had dictionary entries were recombined as necessary. At present about 27,000 unique Japanese words and phrases are indexed.
+
+The list of words associated with each sentence is used by the WWWJDIC server to select examples of the usage of the words. In addition, users of the WWWJDIC server can search the Corpus using text strings in Japanese and/or English, and using regular expressions. Users can also submit corrections to sentences via a WWW feedback form. Several thousand corrections have been submitted this way.
+
+
+Current Format
+
+The file is in text format, with the Japanese in the EUC-JP encoding. If you wish to have it in any other format, you will have to convert it yourself.
+
+The format is as follows:
+
+   1. the file consists of pairs of lines, beginning with "A: " and "B: " respectively. There are also comment lines which begin with a "#". In many cases these are A:/B: lines that have been removed from the file as far as WWWJDIC is concerned.
+   2. the "A:" lines contain the Japanese sentence and the English translation, separated by a TAB character.
+   3. the "B:" lines contain a space-delimited list of Japanese words found in the preceding sentence.
+   4. the Japanese words in the "B:" lines can have the following appended:
+         1. a reading in hiragana. This is to resolve cases where the word can be read different ways. WWWJDIC uses this to ensure that only the appropriate sentences are linked. The reading is in "round" parentheses.
+         2. a sense number. This occurs when the word has multiple senses in the EDICT file, and indicates which sense applies in the sentence. WWWJDIC displays these numbers. The sense number is in "square" parentheses.
+         3. the form in which the word appears in the sentence. This will differ from the indexing word if it has been inflected, for example. This field is in "curly" parentheses.
+
+The following example pair illustrates the format:
+
+A: 驚かない所をみると知ってたのね。[TAB]Seeing that you're not surprised, I think you must have known.
+B: 驚く{驚かない} 所(ところ)[5] 知る{知ってた}
+
+
+Subset
+
+An automatically-generated subset of the edited corpus is also available. The generation selects sentences at random, while ensuring that all the indexed words continue to be represented. The subset is about 30% the size of the full file.
+
+ 
+A Warning to Users
+
+The Corpus is a useful and interesting collection of matched Japanese and English sentence pairs, however it cannot be regarded as containing natural or representative examples of text in either language. This is because of the way it was originally compiled and the artificial nature of the sources. Also it still contains a large number of errors and repetitions. It certainly should not be used for any statistical analyses of the text. While the Corpus appears to be adequate and useful as a source of examples of word usage, the user is advised to be cautious and critical. The following points should be considered:
+
+    * the sentences were typed in by students in order to meet a work requirement. Initially there were many mistakes both in the Japanese and English. While many have been corrected some still remain.
+    * some clearly contain translations into Japanese of English sentences, and often do not represent the most natural way things are said in Japanese (overuse of pronouns, etc.).
+    * others contain English translations which are very literal translations of the Japanese, and perhaps came from simple machine translation systems.
+    * it should be noted that many of the sentences are of the kinds found in older "study for entrance exam books", and thus are likely to have contrived examples of grammar usage or slightly archaic English examples passed down from generation to generation by (Japanese) English teachers. They are not examples of normally-used modern English, and should not always be regarded as suitable for English study.
+
+While the corpus may be freely downloaded and used in servers, etc. two special requests are made:
+
+   1. that some facility be made for regular download and incorporation of new versions. The corpus is being regularly edited and updated and it is a pity to see already-corrected errors still on display in other systems.
+   2. people using copies of the corpus in servers and other systems should make clear to their users that errors, etc. as described above exist in the corpus.
+   3. corrections made to the corpus be relayed back to me so that the original can be improved as well.
+
+
+Copyright?
+
+The file is in the Public Domain. Professor Tanaka made the original file available on this basis, and although many hours have been spent editing it and adding the indices, I don't think its status should be other than freely available. However, if you are using the file in a system, it would be polite to mention where you got it, and provide a link back to this page.
+
+
+Downloads
+
+The original file is available from [9] (in UTF8 coding) or [10] (in EUC-JP coding). The edited version used in the WWWJDIC server can be downloaded from:
+
+    * complete version[1]. This is the current file being used by the Monash WWWJDIC server. Each time it is updated a date-stamp is set;
+    * subset[11].
+
+
+And Closing...
+
+Many people have played a part in editing the examples file, and extending and correcting the indices. I particularly wish to acknowledge the contribution of Paul Blay, whose work significantly improved the indices, including the creation of all the {} extensions. Paul is currently maintaining the file.
+
+Jim Breen
+June 2006 
+
+
+---
+ [1] http://www.csse.monash.edu.au/~jwb/examples.gz
+ [2] http://www.epwing.or.jp/
+ [3] http://openlab.ring.gr.jp/edict/fpw/
+ [4] http://www.sra.co.jp/people/m-kasahr/freepwing/
+ [5] http://kakasi.namazu.org/
+ [6] http://afnlp.org/pacling2001/pdf/tanaka.pdf
+ [7] http://www.csse.monash.edu.au/~jwb/wwwjdic.html
+ [8] http://www.csse.monash.edu.au/~jwb/papillon/dicexamples.html
+ [9] ftp://ftp.monash.edu.au/pub/nihongo/tanakacorp_utf8.gz
+[10] ftp://ftp.monash.edu.au/pub/nihongo/tanakacorp_euc.gz
+[11] http://www.csse.monash.edu.au/~jwb/examples_s.gz

@@ -1,0 +1,151 @@
+2011-01-05 Hannes Loeffler <hal@hloeffler.info>
+
+  * edict-fpw2.6.1
+  * reordered <sense> output to have <gloss> first, also check if <gloss>
+    does actually exist
+  * added <dial>
+
+2011-01-04 Hannes Loeffler <hal@hloeffler.info>
+
+  * edict-fpw2.6.0
+  * output ent_seq in warning messages
+
+2010-12-20 Hannes Loeffler <hal@hloeffler.info>
+
+  * some changes in the Makefile
+
+2010-11-27 Hannes Loeffler <hal@hloeffler.info>
+
+  * fixed language checking in cnvdic
+
+2010-11-26 Hannes Loeffler <hal@hloeffler.info>
+
+  * edict-fpw2.5.6
+  * unified key processing in register()
+  * added warning routine
+
+2010-11-25 Hannes Loeffler <hal@hloeffler.info>
+
+  * edict-fpw2.5.6
+  * call register() with only on set of keys
+
+2010-11-24 Hannes Loeffler <hal@hloeffler.info>
+
+  * edict-fpw2.5.5
+  * better(?) check for JIS X 0213
+  * weed out some more characters the backend won't accept: need more
+    robust code!
+  * some minor bugs
+
+2008-11-28 Hannes Loeffler <hal@hloeffler.info>
+
+  * edict-fpw2.5.4
+  * added distrib and distrib-ebzip targets to Makefile
+
+2008-11-27 Hannes Loeffler <hal@hloeffler.info>
+
+  * edict-fpw2.5.3
+  * added install2 target to Makefile, some cleanup
+  * changes to menu
+
+2008-11-24 Hannes Loeffler <hal@hloeffler.info>
+
+  * edict-fpw2.5.2
+  * some cleanup, removal of unneeded code
+
+2008-11-21 Hannes Loeffler <hal@hloeffler.info>
+
+  * edict-fpw2.5.1
+  * few changes and minor bugfices in Makefile
+
+2008-11-21 Hannes Loeffler <hal@hloeffler.info>
+
+  * edict-fpw2.5.0
+  * g_lang attribute changed to xml:lang according to Rev 1.07 of JMdict
+  * added support for norwegian
+  * new pseudo search keys '_menu' and '_version'
+  * dictionary update to version from 2008-11-21
+
+2007-03-05 Hannes Loeffler <hal@hloeffler.info>
+
+  * minor changes
+
+2007-03-01 Hannes Loeffler <hal@hloeffler.info>
+
+  * edict-fpw2.4.0
+  * added <stagk>, <stagk>, <field>, <s_inf>
+  * some small changes and bug fixes
+
+2007-02-27 Hannes Loeffler <hal@hloeffler.info>
+
+  * edict-fpw2.3.3
+  * finally fixed bug involving <sense>: each sense separate entry now
+
+2007-01-29 Hannes Loeffler <hal@hloeffler.info>
+
+  * edict-fpw2.3.2
+  * fixed bug in writing copyright information
+
+2007-01-25 Hannes Loeffler <hal@hloeffler.info>
+
+  * edict-fpw2.3.1
+  * fixed heading bug: choose kana for heading if no kanji
+  * fixed gloss bug: multiple entries were ignored
+  * dictionary update to edict version from 2007-01-25
+
+2006-02-27 Hannes Loeffler <hal@hloeffler.info>
+
+  * update to V2005-05, 04 October 2005
+
+2005-03-23 Hannes Loeffler <hal@hloeffler.info>
+
+  * switched to MarkupInterface
+  * added priorities
+  * some code cleanup
+
+2005-02-09 Hannes Loeffler <hal@hloeffler.info>
+
+  * minor change in Makefile
+
+2005-01-31 Hannes Loeffler <hal@hloeffler.info>
+
+  * modified Makefile for FreePWING 1.4.4
+  * added frequencies based on ichi1, jdd1, gai1, spec1 and news1
+
+2005-01-25 Hannes Loeffler <hal@hloeffler.info>
+
+  * edict-fpw2.2.1
+  * bug: didn't delete all expressions in parenthesis for kanji/kana keys,
+         -> removal of duplicates
+  * JMdict V2004-03 from Dec 10, 2004
+
+2004-12-28 Hannes Loeffler <hal@hloeffler.info>
+
+  * allow dutch entries to be extracted (currently only about 500 entries)
+
+2004-11-15 Hannes Loeffler <hal@hloeffler.info>
+
+  * edict-fpw2.2
+  * added gaiji bitmaps
+  * corrected license for jr-edict
+
+2004-10-28 Hannes Loeffler <hal@hloeffler.info>
+
+  * edict-fpw2.1
+  * added <re_restr>
+  * added support for Russian, French, and German
+  * added kana/romaji conversion for romaji keys
+
+2004-10-08 Hannes Loeffler <hal@hloeffler.info>
+
+  * edict-fpw2.0: based on JMdict (XML version of EDICT)
+
+2000-07-23 Kazuhiko Shiozaki <kazuhiko@ring.gr.jp>
+
+  * edict-fpw1.2.1 公開。
+  * fpwedict README.pkg を README.PKG に変更。EUC への変換を追加。
+  * Makefile ARCHIVEEXTRA に AUTHORS, COPYING, ChangeLog を追加。
+
+2000-07-21 Kazuhiko Shiozaki <kazuhiko@ring.gr.jp>
+
+  * edict-fpw1.2 公開。

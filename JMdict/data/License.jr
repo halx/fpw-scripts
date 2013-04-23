@@ -1,0 +1,301 @@
+JR-EDICT LICENCE STATEMENT
+
+Copyright (C) 2004 Oleg V. Volkov
+
+Introduction
+
+This document outlines the licence arrangement put in place for usage
+of JR-EDICT and all derived files.
+
+Application
+
+This licence statement and copyright notice applies to the following
+dictionary files, the associated documentation files, and any data
+files which are derived from them.
+
+  * jr-edict.source - Japanese-Russian Dictionary File with additional
+    internal and grammatical tags.
+  * jr-edict.words - Generated file that contains only translations.
+  * jr-edict.tags - Generated file that contains translations and populated
+    with grammatical tags from main file and JMDICT/EDICT(x).
+
+    Copyright over the documents covered by this statement is held by
+    Oleg V. VOLKOV.
+
+    (x) JMDICT and EDICT are Japanese-Multilingual and Japanese-English
+    Dictionaries created by Jim Breen (jwb@csse.monash.edu.au) and
+    maintained by The Electronic Dictionary Research and Development Group.
+    Copyright over most grammatical data in generated files jr-edict.tags.*
+    is held by The Electronic Dictionary Research and Development Group.
+    See following pages for more info:
+    EDICT: http://www.csse.monash.edu.au/~jwb/edict.html
+    JMDICT: http://www.csse.monash.edu.au/~jwb/j_jmdict.html
+    Home Page of the Electronic Dictionary Research and Development Group:
+    http://www.csse.monash.edu.au/groups/edrdg/
+    Electronic Dictionary Research and Development Group General Dictionary
+    Licence Statement: http://www.csse.monash.edu.au/groups/edrdg/licence.html
+
+Usage, Copying and Distribution
+
+ a. General Permission
+    Any person or organization in possession of a copy of any of the
+    files covered by this statement, whether they have received the
+    copy via free distribution or purchase:
+      i. may use the file for personal purposes such as to assist with
+         reading texts, research, translation services, etc.
+     ii. may, subject to the restriction detailed below, supply
+         extracts or small portions of the files to other persons or
+         organizations in the form of written documents, electronic
+         mail, etc. Such an activity may result in a fee, e.g. in the
+         case of professional translation services.
+    iii. must as part of the receiving of the copy undertake to be
+         bound by all the conditions below relating to the
+         distribution of the files.
+ b. Free-of-charge distribution (*)
+    Permission is granted:
+      i. to make and distribute verbatim copies of these files
+         provided the full documentation of the files and this
+         copyright notice and permission notice is distributed with
+         all copies. Any distribution of the files must take place
+         without a financial return, except a charge to cover the cost
+         of the distribution medium.
+     ii. to place copies of these files on WWW and ftp servers for
+         subsequent distribution under the same conditions listed
+         above. For WWW distribution, there must be links to either
+         local copies of the documentation and licence files or to the
+         locations of the files at Monash University, and
+         acknowledgment must be made of the source of the files.
+    iii. to make and distribute extracts or subsets of the files, or
+         files in other formats and codings containing material
+         selected from the files, under the same conditions applying
+         to verbatim copies. Where the coding or format is associated
+         with a particular software package, the utility software
+         which produces the distributed format must also be available
+         freely for general use.
+     iv. to translate elements of the files into other languages, and
+         to make and distribute copies of those translations under the
+         same conditions applying to verbatim copies.
+ c. Incorporation into Free Software and Server Systems (*)
+    Permission is granted:
+      i. to use these files as part of software which is distributed
+         free-of-charge, provided all the conditions associated with
+         free-of-charge distribution as described above are met, and
+         provided that full acknowledgement of the source of the files
+         is made in the software documentation.
+     ii. to incorporate the files into any WWW or similar server
+         system which operates without charge provided all the
+         conditions associated with free-of-charge distribution as
+         described above are met. In addition, full acknowledgement of
+         the source of the files must be prominently displayed on the
+         server, and links must be made available on the "front" page
+         of the particular server to the full documentation and
+         copyright statements of the files.
+ d. Shareware Software
+    Permission is granted to use these files as part of software which
+    is distributed on a "shareware" basis, and for which a charge of
+    no more than $US100 is levied, on the following conditions:
+      i. the distributors of the software notify copyright holder prior to
+         the release of the package.
+     ii. the distributors undertake to remit to copyright holder 10% of the
+         gross receipts for the software, or such other amount agreed
+         by copyright holder prior to the release of the software. The
+         remittance is to take place at least once each 3 months.
+    iii. the full documentation of the files and this copyright
+         notice and permission notice is distributed with all copies.
+     iv. full acknowledgement of the source of the files is made in
+         the software documentation.
+ e. Commercial WWW Servers
+    The contents of these file must not be made available via WWW
+    services for which a charge is levied without the prior permission
+    of copyright holder. Permission for such usage will normally be granted
+    in return for a fee based on a proportion of the subscription
+    charges. The other conditions applying to free WWW servers also
+    apply to commercial WWW servers.
+ f. Commercial Software Packages
+    The contents of these files must not be incorporated into a
+    software package(+) that is sold commercially or used exclusively
+    within a company or organization without the prior permission of
+    copyright holder. Permission will normally be granted for a non-exclusive
+    licence to incorporate the files in return for either a one-off
+    payment to copyright holder or a royalty on sales. The other conditions
+    applying Shareware software apply.
+    (+) For the purposes of this section, "incorporated into a
+    software package" is defined as having the software designed and
+    developed to operate with the dictionary files, and typically has
+    the file(s) distributed with the software. Where software has been
+    designed and developed primarily to use other dictionary files,
+    versions of the files covered by this licence may be adapted for
+    use with such software and made available free-of-charge under the
+    "Free-of-charge distribution" provisions above. Incorporation of
+    these files into standard or optional for-fee distributions is
+    deemed to be incorporation into the software, and will require a
+    licence.
+ h. Published Dictionaries
+    The contents of these files must not be published on paper or
+    other media such as CD-ROM without the prior permission of the
+    copyright holder.
+
+(*) Persons or organizations distributing copies or extracts of the
+files in these categories may do so without requesting or receiving
+formal permission from copyright holder. Notification of the distribution
+would be appreciated.
+
+Note that in all cases, the addition of material to the files or to
+extracts from the files does not remove or in any way diminish
+copyright holder's copyright over the files.
+
+Enquiries
+
+All enquiries to:
+Oleg V. Volkov &lt;jr-edict@mail.ru&gt;
+
+
+
+§­§ª§¸§¦§¯§©§ª§Á JR-EDICT
+
+Copyright (C) 2004 §°§Ý§Ö§Ô §£. §£§à§Ý§Ü§à§Ó
+
+§£§ã§ä§å§á§Ý§Ö§ß§Ú§Ö
+
+§¿§ä§à§ä §Õ§à§Ü§å§Þ§Ö§ß§ä §à§á§Ú§ã§í§Ó§Ñ§Ö§ä §Ý§Ú§è§Ö§ß§Ù§Ú§à§ß§ß§à§Ö §ã§à§Ô§Ý§Ñ§ê§Ö§ß§Ú§Ö §à§ç§Ó§Ñ§ä§í§Ó§Ñ§ð§ë§Ö§Ö §Ú§ã§á§à§Ý§î§Ù§à§Ó§Ñ§ß§Ú§Ö
+JR-EDICT §Ú §Ó§ã§Ö§ç §á§â§à§Ú§Ù§Ó§à§Õ§ß§í§ç §æ§Ñ§Û§Ý§à§Ó.
+
+§±§â§Ú§Þ§Ö§ß§Ú§Þ§à§ã§ä§î
+
+§¿§ä§à §Ý§Ú§è§Ö§ß§Ù§Ú§à§ß§ß§à§Ö §ã§à§Ô§Ý§Ñ§ê§Ö§ß§Ú§Ö §Ú §å§Ó§Ö§Õ§à§Þ§Ý§Ö§ß§Ú§Ö §à§Ò §Ñ§Ó§ä§à§â§ã§Ü§à§Þ §á§â§Ñ§Ó§Ö §à§ä§ß§à§ã§Ú§ä§ã§ñ
+§Ü §á§Ö§â§Ö§é§Ú§ã§Ý§Ö§ß§ß§í§Þ §ß§Ú§Ø§Ö §ã§Ý§à§Ó§Ñ§â§ß§í§Þ §æ§Ñ§Û§Ý§Ñ§Þ, §Ü §ã§à§á§å§ä§ã§ä§Ó§å§ð§ë§Ö§Û §Õ§à§Ü§å§Þ§Ö§ß§ä§Ñ§è§Ú§Ú
+§Ú §Ü §Ý§ð§Ò§í§Þ §á§â§à§Ú§Ù§Ó§à§Õ§ß§í§Þ §à§ä §ß§Ú§ç §æ§Ñ§Û§Ý§Ñ§Þ.
+
+  * jr-edict.source - §Á§á§à§ß§ã§Ü§à-§â§å§ã§ã§Ü§Ú§Û §ã§Ý§à§Ó§Ñ§â§ß§í§Û §æ§Ñ§Û§Ý §ã §Õ§à§á§à§Ý§ß§Ú§ä§Ö§Ý§î§ß§í§Þ§Ú
+    §ä§ï§Ô§Ñ§Þ§Ú §Õ§Ý§ñ §Ó§ß§å§ä§â§Ö§ß§ß§Ú§ç §è§Ö§Ý§Ö§Û §Ú §Ô§â§Ñ§Þ§Þ§Ñ§ä§Ú§é§Ö§ã§Ü§à§Û §Ú§ß§æ§à§â§Þ§Ñ§è§Ú§Ö§Û.
+  * jr-edict.words - §Ô§Ö§ß§Ö§â§Ú§â§å§Ö§Þ§í§Û §æ§Ñ§Û§Ý, §ã§à§Õ§Ö§â§Ø§Ñ§ë§Ú§Û §ä§à§Ý§î§Ü§à §á§Ö§â§Ö§Ó§à§Õ§í.
+  * jr-edict.tags - §Ô§Ö§ß§Ö§â§Ú§â§å§Ö§Þ§í§Û §æ§Ñ§Û§Ý, §ã§à§Õ§Ö§â§Ø§Ñ§ë§Ú§Û §á§Ö§â§Ö§Ó§à§Õ§í §Ú §Ô§â§Ñ§Þ§Þ§Ñ§ä§Ú§é§Ö§ã§Ü§Ú§Ö
+    §ä§ï§Ô§Ú §Ú§Ù §à§ã§ß§à§Ó§ß§à§Ô§à §æ§Ñ§Û§Ý§Ñ §Ú JMDICT/EDICT(x).
+
+    §£§Ý§Ñ§Õ§Ö§Ý§î§è§Ö§Þ §Ñ§Ó§ä§à§â§ã§Ü§Ú§ç §á§â§Ñ§Ó §ß§Ñ §Õ§à§Ü§å§Þ§Ö§ß§ä§í §å§á§à§Þ§ñ§ß§å§ä§í§Ö §Ó §ï§ä§à§Þ §ã§à§Ô§Ý§Ñ§ê§Ö§ß§Ú§Ú
+    §ñ§Ó§Ý§ñ§Ö§ä§ã§ñ §°§Ý§Ö§Ô §£. §£§°§­§¬§°§£.
+
+    (x) JMDICT §Ú EDICT - §ï§ä§à §ñ§á§à§ß§ã§Ü§à-§Þ§ß§à§Ô§à§ñ§Ù§í§é§ß§í§Û §Ú §ñ§á§à§ß§ã§Ü§à-§Ñ§ß§Ô§Ý§Ú§Û§ã§Ü§Ú§Û
+    §ã§Ý§à§Ó§Ñ§â§Ú §ã§à§Ù§Õ§Ñ§ß§ß§í§Ö §¥§Ø§Ú§Þ§à§Þ §¢§â§Ú§ß§à§Þ (Jim Breen) (jwb@csse.monash.edu.au)
+    §Ú §á§à§Õ§Õ§Ö§â§Ø§Ú§Ó§Ñ§Ö§Þ§í§Ö The Electronic Dictionary Research and Development Group.
+    §£§Ý§Ñ§Õ§Ö§Ý§î§è§Ö§Þ §Ñ§Ó§ä§à§â§ã§Ü§Ú§ç §á§â§Ñ§Ó §ß§Ñ §Ò§à§Ý§î§ê§å§ð §é§Ñ§ã§ä§î §Ô§â§Ñ§Þ§Þ§Ñ§ä§Ú§é§Ö§ã§Ü§à§Û §Ú§ß§æ§à§â§Þ§Ñ§è§Ú§Ú
+    §Ó §Ô§Ö§ß§Ö§â§Ú§â§å§Ö§Þ§í§ç §æ§Ñ§Û§Ý§Ñ§ç jr-edict.tags.* §ñ§Ó§Ý§ñ§Ö§ä§ã§ñ The Electronic Dictionary
+    Research and Development Group.
+    §¢§à§Ý§Ö§Ö §á§à§Õ§â§à§Ò§ß§å§ð §Ú§ß§æ§à§â§Þ§Ñ§è§Ú§ð §Þ§à§Ø§ß§à §á§à§Ý§å§é§Ú§ä§î §ß§Ñ §ã§Ý§Ö§Õ§å§ð§ë§Ú§ç §ã§ä§â§Ñ§ß§Ú§è§Ñ§ç:
+    EDICT: http://www.csse.monash.edu.au/~jwb/edict.html
+    JMDICT: http://www.csse.monash.edu.au/~jwb/j_jmdict.html
+    Home Page of the Electronic Dictionary Research and Development Group:
+    http://www.csse.monash.edu.au/groups/edrdg/
+    Electronic Dictionary Research and Development Group General Dictionary
+    Licence Statement: http://www.csse.monash.edu.au/groups/edrdg/licence.html
+
+§ª§ã§á§à§Ý§î§Ù§à§Ó§Ñ§ß§Ú§Ö, §Ü§à§á§Ú§â§à§Ó§Ñ§ß§Ú§Ö §Ú §â§Ñ§ã§á§â§à§ã§ä§â§Ñ§ß§Ö§ß§Ú§Ö:
+
+ a. §°§ã§ß§à§Ó§ß§à§Ö §Ú§ã§á§à§Ý§î§Ù§à§Ó§Ñ§ß§Ú§Ö
+    §­§ð§Ò§à§Ö §Ý§Ú§è§à §Ú§Ý§Ú §à§â§Ô§Ñ§ß§Ú§Ù§Ñ§è§Ú§ñ, §Ú§Þ§Ö§ð§ë§Ñ§ñ §Ü§à§á§Ú§ð §Ý§ð§Ò§à§Ô§à §Ú§Ù §æ§Ñ§Û§Ý§à§Ó
+    §á§à§á§Ñ§Õ§Ñ§ð§ë§Ú§ç §á§à§Õ §Õ§Ö§Û§ã§ä§Ó§Ú§Ö §ï§ä§à§Ô§à §ã§à§Ô§Ý§Ñ§ê§Ö§ß§Ú§ñ, §Ó§ß§Ö §Ù§Ñ§Ó§Ú§ã§Ú§Þ§à§ã§ä§Ú §à§ä §ä§à§Ô§à,
+    §Ü§å§á§Ý§Ö§ß§Ñ §ï§ä§Ñ §Ü§à§á§Ú§ñ §Ú§Ý§Ú §á§à§Ý§å§é§Ö§ß§Ñ §é§Ö§â§Ö§Ù §Ü§Ñ§ß§Ñ§Ý§í §ã§Ó§à§Ò§à§Õ§ß§à§Ô§à §â§Ñ§ã§á§â§à§ã§ä§â§Ñ§ß§Ö§ß§Ú§ñ:
+      i. §Þ§à§Ô§å§ä §Ú§ã§á§à§Ý§î§Ù§à§Ó§Ñ§ä§î §æ§Ñ§Û§Ý§í §Õ§Ý§ñ §Ý§Ú§é§ß§í§ç §è§Ö§Ý§Ö§Û, §ä§Ñ§Ü§Ú§ç §Ü§Ñ§Ü §á§à§Þ§à§ë§î
+         §Ó §é§ä§Ö§ß§Ú§Ú §ä§Ö§Ü§ã§ä§à§Ó, §Ú§ã§ã§Ý§Ö§Õ§à§Ó§Ñ§ß§Ú§ñ§ç, §á§Ö§â§Ö§Ó§à§Õ§Ö §Ú §ä. §Õ.
+     ii. §Þ§à§Ô§å§ä, §Ó §ã§à§à§ä§Ó§Ö§ä§ã§ä§Ó§Ú§Ú §ã §à§Ô§â§Ñ§ß§Ú§é§Ö§ß§Ú§ñ§Þ§Ú §å§Ü§Ñ§Ù§Ñ§ß§ß§í§Þ§Ú §ß§Ú§Ø§Ö, §á§Ö§â§Ö§Õ§Ñ§Ó§Ñ§ä§î
+         §Ó§í§Õ§Ö§â§Ø§Ü§Ú §Ú§Ý§Ú §ß§Ö§Ò§à§Ý§î§ê§Ú§Ö §é§Ñ§ã§ä§Ú §æ§Ñ§Û§Ý§à§Ó §Õ§â§å§Ô§Ú§Þ §Ý§Ú§è§Ñ§Þ §Ú§Ý§Ú §à§â§Ô§Ñ§ß§Ú§Ù§Ñ§è§Ú§ñ§Þ
+         §Ó §á§Ú§ã§î§Þ§Ö§ß§ß§à§Û §æ§à§â§Þ§Ö, §Ó §Ó§Ú§Õ§Ö §ï§Ý§Ö§Ü§ä§â§à§ß§ß§à§Û §á§à§é§ä§í §Ú §ä. §Õ. §±§à§Õ§à§Ò§ß§Ñ§ñ
+         §Õ§Ö§ñ§ä§Ö§Ý§î§ß§à§ã§ä§î, §à§Õ§ß§Ñ§Ü§à, §Þ§à§Ø§Ö§ä §á§à§Ó§Ý§Ö§é§î §ß§Ö§à§Ò§ç§à§Õ§Ú§Þ§à§ã§ä§î §à§á§Ý§Ñ§ä§í, §Ü §á§â§Ú§Þ§Ö§â§å,
+         §Ó §ã§Ý§å§é§Ñ§Ö §à§Ü§Ñ§Ù§Ñ§ß§Ú§ñ, §ä§Ñ§Ü§Ú§Þ §à§Ò§â§Ñ§Ù§à§Þ, §á§â§à§æ§Ö§ã§ã§Ú§à§ß§Ñ§Ý§î§ß§í§ç §å§ã§Ý§å§Ô §á§Ö§â§Ö§Ó§à§Õ§Ñ.
+    iii. §Õ§à§Ý§Ø§ß§í §á§â§Ú§ß§ñ§ä§î §ß§Ñ §ã§Ö§Ò§ñ §à§Ò§ñ§Ù§Ñ§ä§Ö§Ý§î§ã§ä§Ó§Ñ §à §ã§à§Ò§Ý§ð§Õ§Ö§ß§Ú§Ú §Ó§ã§Ö§ç §á§â§Ñ§Ó§Ú§Ý
+         §â§Ñ§ã§á§â§à§ã§ä§â§Ñ§ß§Ö§ß§Ú§ñ §å§Ü§Ñ§Ù§Ñ§ß§ß§í§ç §ß§Ú§Ø§Ö.
+ b. §¢§Ö§ã§á§Ý§Ñ§ä§ß§à§Ö §â§Ñ§ã§á§â§à§ã§ä§â§Ñ§ß§Ö§ß§Ú§Ö (*)
+    §²§Ñ§Ù§â§Ö§ê§Ö§ß§à:
+      i. §ã§à§Ù§Õ§Ñ§Ó§Ñ§ä§î §Ú §â§Ñ§ã§á§â§à§ã§ä§â§Ñ§ß§ñ§ä§î §Ú§Õ§Ö§ß§ä§Ú§é§ß§í§Ö §Ü§à§á§Ú§Ú §ï§ä§Ú§ç §æ§Ñ§Û§Ý§à§Ó,
+         §ã §å§ã§Ý§à§Ó§Ú§Ö§Þ, §é§ä§à §ã§à §Ó§ã§Ö§Þ§Ú §Ü§à§á§Ú§ñ§Þ§Ú §Ò§å§Õ§å§ä §â§Ñ§ã§á§â§à§ã§ä§â§Ñ§ß§ñ§ä§î§ã§ñ §á§à§Ý§ß§Ñ§ñ
+         §Õ§à§Ü§å§Þ§Ö§ß§ä§Ñ§è§Ú§ñ, §å§Ó§Ö§Õ§à§Þ§Ý§Ö§ß§Ú§Ö §à§Ò §Ñ§Ó§ä§à§â§ã§Ü§à§Þ §á§â§Ñ§Ó§Ö §Ú §ï§ä§à §ã§à§Ô§Ý§Ñ§ê§Ö§ß§Ú§Ö.
+         §­§ð§Ò§à§Ö §â§Ñ§ã§á§â§à§ã§ä§â§Ñ§ß§Ö§ß§Ú§Ö §Õ§à§Ý§Ø§ß§à §á§â§à§Ó§à§Õ§Ú§ä§î §Ò§Ö§Ù §Ü§Ñ§Ü§à§Û §Ý§Ú§Ò§à §à§á§Ý§Ñ§ä§í,
+         §Ù§Ñ §Ú§ã§Ü§Ý§ð§é§Ö§ß§Ú§Ö§Þ §à§á§Ý§Ñ§ä§í §ã§ä§à§Ú§Þ§à§ã§ä§Ú §ß§à§ã§Ú§ä§Ö§Ý§ñ §Ú§ß§æ§à§â§Þ§Ñ§è§Ú§Ú.
+     ii. §â§Ñ§Ù§Þ§Ö§ë§Ñ§ä§î §Ü§à§á§Ú§Ú §ï§ä§Ú§ç §æ§Ñ§Û§Ý§à§Ó §ß§Ñ WWW §Ú FTP §ã§Ö§â§Ó§Ö§â§Ñ§ç §Õ§Ý§ñ §á§à§ã§Ý§Ö§Õ§å§ð§ë§Ö§Ô§à
+         §â§Ñ§ã§á§â§à§ã§ä§â§Ñ§ß§Ö§ß§Ú§ñ §ß§Ñ §å§ã§Ý§à§Ó§Ú§ñ§ç §å§Ü§Ñ§Ù§Ñ§ß§ß§í§ç §Ó§í§ê§Ö. §±§â§Ú WWW §â§Ñ§ã§á§â§à§ã§ä§â§Ñ§ß§Ö§ß§Ú§Ú
+         §ä§â§Ö§Ò§å§Ö§ä§ã§ñ §ã§à§Ù§Õ§Ñ§ä§î §ã§ã§í§Ý§Ü§Ú §Ý§Ú§Ò§à §ß§Ñ §Ý§à§Ü§Ñ§Ý§î§ß§í§Ö §Ü§à§á§Ú§Ú §Õ§à§Ü§å§Þ§Ö§ß§ä§Ñ§è§Ú§Ú
+         §Ú §Ý§Ú§è§Ö§ß§Ù§Ú§à§ß§ß§í§ç §æ§Ñ§Û§Ý§à§Ó §Ú§Ý§Ú §ß§Ñ §Ú§ç §â§Ñ§ã§á§à§Ý§à§Ø§Ö§ß§Ú§Ö §ß§Ñ §ã§Ö§â§Ó§Ö§â§Ö
+         §å§ß§Ú§Ó§Ö§â§ã§Ú§ä§Ö§ä§Ñ §®§à§ß§Ñ§ê (Monash University), §ã §å§Ü§Ñ§Ù§Ñ§ß§Ú§Ö§Þ §Ú§ã§ä§à§é§ß§Ú§Ü§Ñ
+         §æ§Ñ§Û§Ý§à§Ó.
+    iii. §ã§à§Ù§Õ§Ñ§Ó§Ñ§ä§î §Ú §â§Ñ§ã§á§â§à§ã§ä§â§Ñ§ß§ñ§ä§î §Ó§í§Õ§Ö§â§Ø§Ü§Ú §Ú§Ý§Ú §ã§à§Ü§â§Ñ§ë§×§ß§ß§í§Ö §Ü§à§Þ§á§Ý§Ö§Ü§ä§í
+         §æ§Ñ§Û§Ý§à§Ó §Ú§Ý§Ú §æ§Ñ§Û§Ý§í §Ó §Õ§â§å§Ô§Ú§ç §æ§à§â§Þ§Ñ§ä§Ñ§ç §Ú §Ü§à§Õ§Ú§â§à§Ó§Ü§Ñ§ç, §ã§à§Õ§Ö§â§Ø§Ñ§ë§Ú§Ö
+         §Þ§Ñ§ä§Ö§â§Ú§Ñ§Ý§í §Ú§Ù §Õ§Ñ§ß§ß§í§ç §æ§Ñ§Û§Ý§à§Ó, §ã §ä§Ö§Þ§Ú §Ø§Ö §å§ã§Ý§à§Ó§Ú§ñ§Þ§Ú, §é§ä§à §Ú §Õ§Ý§ñ
+         §Ú§Õ§Ö§ß§ä§Ú§é§ß§í§ç §Ü§à§á§Ú§Û. §£ §ã§Ý§å§é§Ñ§Ö §Ö§ã§Ý§Ú §Ü§à§Õ§Ú§â§à§Ó§Ü§Ñ §Ú§Ý§Ú §æ§à§â§Þ§Ñ§ä §ã§Ó§ñ§Ù§Ñ§ß§í
+         §ã §Ü§Ñ§Ü§Ú§Þ-§Ý§Ú§Ò§à §á§â§à§Ô§â§Ñ§Þ§Þ§ß§í§Þ §á§Ñ§Ü§Ö§ä§à§Þ, §å§ä§Ú§Ý§Ú§ä§Ñ §Õ§Ý§ñ §ã§à§Ù§Õ§Ñ§ß§Ú§ñ §æ§Ñ§Û§Ý§à§Ó
+         §Ó §ï§ä§à§Þ §æ§à§â§Þ§Ñ§ä§Ö §Ú§Ý§Ú §Ü§à§Õ§Ú§â§à§Ó§Ü§Ö §ä§Ñ§Ü§Ø§Ö §Õ§à§Ý§Ø§ß§Ñ §Ò§í§ä§î §Õ§à§ã§ä§å§á§ß§Ñ §Õ§Ý§ñ
+         §Ò§Ö§ã§á§Ý§Ñ§ä§ß§à§Ô§à §á§à§Ý§î§Ù§à§Ó§Ñ§ß§Ú§ñ.
+     iv. §á§Ö§â§Ö§Ó§à§Õ§Ú§ä§î §ï§Ý§Ö§Þ§Ö§ß§ä§í §æ§Ñ§Û§Ý§à§Ó §ß§Ñ §Õ§â§å§Ô§Ú§Ö §ñ§Ù§í§Ü§Ú, §ã§à§Ù§Õ§Ñ§Ó§Ñ§ä§î §Ú
+         §â§Ñ§ã§á§â§à§ã§ä§â§Ñ§ß§ñ§ä§î §Ü§à§á§Ú§Ú §á§à§Õ§à§Ò§ß§í§ç §á§Ö§â§Ö§Ó§à§Õ§à§Ó §ã §ä§Ö§Þ§Ú §Ø§Ö §å§ã§Ý§à§Ó§Ú§ñ§Þ,
+         §é§ä§à §Ú §Õ§Ý§ñ §Ú§Õ§Ö§ß§ä§Ú§é§ß§í§ç §Ü§à§á§Ú§Û.
+ c. §£§Ü§Ý§ð§é§Ö§ß§Ú§Ö §Ó §Ò§Ö§ã§á§Ý§Ñ§ä§ß§à§Ö §á§â§à§Ô§â§Ñ§Þ§Þ§ß§à§Ö §à§Ò§Ö§ã§á§Ö§é§Ö§ß§Ú§Ö §Ú §ã§Ö§â§Ó§Ö§â§ß§í§Ö §ã§Ú§ã§ä§Ö§Þ§í
+    §²§Ñ§Ù§â§Ö§ê§Ö§ß§à:
+      i. §Ú§ã§á§à§Ý§î§Ù§à§Ó§Ñ§ä§î §ï§ä§Ú §æ§Ñ§Û§Ý§í §Ü§Ñ§Ü §é§Ñ§ã§ä§î §á§â§à§Ô§â§Ñ§Þ§Þ§ß§à§Ô§à §à§Ò§Ö§ã§á§Ö§é§Ö§ß§Ú§ñ
+         §â§Ñ§ã§á§â§à§ã§ä§â§Ñ§ß§ñ§Ö§Þ§à§Ô§à §Ò§Ö§ã§á§Ý§Ñ§ä§ß§à, §ã §å§ã§Ý§à§Ó§Ú§Ö§Þ §ã§à§Ò§Ý§ð§Õ§Ö§ß§Ú§ñ §Ó§ã§Ö§ç
+         §å§Ü§Ñ§Ù§Ñ§ß§ß§í§ç §Ó§í§ê§Ö §å§ã§Ý§à§Ó§Ú§Û §Ò§Ö§ã§á§Ý§Ñ§ä§ß§à§Ô§à §â§Ñ§ã§á§â§à§ã§ä§â§Ñ§ß§Ö§ß§Ú§ñ §æ§Ñ§Û§Ý§à§Ó,
+         §Ú §ã §å§ã§Ý§à§Ó§Ú§Ö§Þ §å§Ó§Ö§Õ§à§Þ§Ý§Ö§ß§Ú§ñ §à§Ò §Ú§ã§ä§à§é§ß§Ú§Ü§Ö §æ§Ñ§Û§Ý§à§Ó §Ó §Õ§à§Ü§å§Þ§Ö§ß§ä§Ñ§è§Ú§Ú
+         §á§â§à§Ô§â§Ñ§Þ§Þ§í.
+     ii. §Ó§Ü§Ý§ð§é§Ñ§ä§î §æ§Ñ§Û§Ý§í §Ó WWW §Ú§Ý§Ú §á§à§Õ§à§Ò§ß§í§Ö §ã§Ö§â§Ó§Ö§â§ß§í§Ö §ã§Ú§ã§ä§Ö§Þ
+         §á§â§Ö§Õ§à§ã§ä§Ñ§Ó§Ý§ñ§ð§ë§Ú§Ö §Ò§Ö§ã§á§Ý§Ñ§ä§ß§í§Ö §å§ã§Ý§å§Ô§Ú, §ã §å§ã§Ý§à§Ó§Ú§Ö§Þ §ã§à§Ò§Ý§ð§Õ§Ö§ß§Ú§ñ §Ó§ã§Ö§ç
+         §å§Ü§Ñ§Ù§Ñ§ß§ß§í§ç §Ó§í§ê§Ö §å§ã§Ý§à§Ó§Ú§Û §Ò§Ö§ã§á§Ý§Ñ§ä§ß§à§Ô§à §â§Ñ§ã§á§â§à§ã§ä§â§Ñ§ß§Ö§ß§Ú§ñ §æ§Ñ§Û§Ý§à§Ó.
+         §£ §Õ§à§á§à§Ý§ß§Ö§ß§Ú§Ö, §ß§Ñ §ã§Ö§â§Ó§Ö§â§Ö §Õ§à§Ý§Ø§ß§à §Ò§í§ä§î §á§à§Ü§Ñ§Ù§Ñ§ß§à §ç§à§â§à§ê§à §Ù§Ñ§Þ§Ö§ä§ß§à§Ö
+         §å§Ó§Ö§Õ§à§Þ§Ý§Ö§ß§Ú§Ö §à§Ò §Ú§ã§ä§à§é§ß§Ú§Ü§Ö §æ§Ñ§Û§Ý§à§Ó §Ú §ß§Ñ "§Ô§Ý§Ñ§Ó§ß§à§Û" §ã§ä§â§Ñ§ß§Ú§è§Ö §Õ§à§Ý§Ø§ß§í
+         §Ò§í§ä§î §ã§à§Ù§Õ§Ñ§ß§í §ã§ã§í§Ý§Ü§Ú §ß§Ñ §á§à§Ý§ß§å§ð §Õ§à§Ü§å§Þ§Ö§ß§ä§Ñ§è§Ú§ð §Ú §æ§Ñ§Û§Ý §ã §Ý§Ú§è§Ö§ß§Ù§Ú§Ö§Û.
+ d. §±§â§à§Ô§â§Ñ§Þ§Þ§í §â§Ñ§ã§á§â§à§ã§ä§â§Ñ§ß§ñ§Ö§Þ§í§Ö §á§à §á§â§Ú§ß§è§Ú§á§å "shareware"
+    §²§Ñ§Ù§â§Ö§ê§Ö§ß§à §Ú§ã§á§à§Ý§î§Ù§à§Ó§Ñ§ä§î §Õ§Ñ§ß§ß§í§Ö §æ§Ñ§Û§Ý§í §Ü§Ñ§Ü §é§Ñ§ã§ä§î §á§â§à§Ô§â§Ñ§Þ§Þ§ß§à§Ô§à §à§Ò§Ö§ã§á§Ö§é§Ö§ß§Ú§ñ
+    §â§Ñ§ã§á§â§à§ã§ä§â§Ñ§ß§ñ§Ö§Þ§à§Ô§à §á§à §á§â§Ú§ß§è§Ú§á§å "shareware", §é§î§ñ §è§Ö§ß§Ñ §ß§Ö §Ó§í§ê§Ö $US100,
+    §ã §å§é§×§ä§à§Þ §ã§Ý§Ö§Õ§å§ð§ë§Ú§ç §å§ã§Ý§à§Ó§Ú§Û:
+      i. §â§Ñ§ã§á§â§à§ã§ä§â§Ñ§ß§Ú§ä§Ö§Ý§î §à§Ò§ñ§Ù§Ñ§ß §å§Ó§Ö§Õ§à§Þ§Ú§ä§î §Ó§Ý§Ñ§Õ§Ö§Ý§î§è§Ñ §Ñ§Ó§ä§à§â§ã§Ü§à§Ô§à §á§â§Ñ§Ó§Ñ
+         §á§Ö§â§Ö§Õ §Ó§í§á§å§ã§Ü§à§Þ §á§â§à§Ô§â§Ñ§Þ§Þ§ß§à§Ô§à §á§Ñ§Ü§Ö§ä§Ñ.
+     ii. §â§Ñ§ã§á§â§à§ã§ä§â§Ñ§ß§Ú§ä§Ö§Ý§î §á§â§Ú§ß§Ú§Þ§Ñ§Ö§ä §ß§Ñ §ã§Ö§Ò§ñ §à§Ò§ñ§Ù§Ñ§ß§ß§à§ã§ä§î §Ó§í§ã§í§Ý§Ñ§ä§î
+         §Ó§Ý§Ñ§Õ§Ö§Ý§î§è§å §Ñ§Ó§ä§à§â§ã§Ü§à§Ô§à §á§â§Ñ§Ó§Ñ 10% §à§ä §à§Ò§ë§Ö§Ô§à §Õ§à§ç§à§Õ§Ñ §á§à§Ý§å§é§Ö§ß§ß§à§Ô§à
+         §Ù§Ñ §â§Ñ§ã§á§â§à§ã§ä§â§Ñ§ß§Ö§ß§Ú§Ö §á§â§à§Ô§â§Ñ§Þ§Þ§í, §Ú§Ý§Ú §Õ§â§å§Ô§å§ð §ã§å§Þ§Þ§å §ã§à§Ô§Ý§Ñ§ã§à§Ó§Ñ§ß§ß§å§ð
+         §ã §Ó§Ý§Ñ§Õ§Ö§Ý§î§è§Ö§Þ §Ñ§Ó§ä§à§â§ã§Ü§à§Ô§à §á§â§Ñ§Ó§Ñ §Õ§à §Ó§í§á§å§ã§Ü§Ñ §á§â§à§Ô§â§Ñ§Þ§Þ§í. §±§Ö§â§Ö§Ó§à§Õ
+         §Õ§Ö§ß§Ö§Ô §Õ§à§Ý§Ø§Ö§ß §á§â§à§Ú§ã§ç§à§Õ§Ú§ä§î §ß§Ö §â§Ö§Ø§Ö §é§Ö§Þ §â§Ñ§Ù §Ó 3 §Þ§Ö§ã§ñ§è§Ñ.
+    iii. §á§à§Ý§ß§Ñ§ñ §Õ§à§Ü§å§Þ§Ö§ß§ä§Ñ§è§Ú§ñ §Ú §Ý§Ú§è§Ö§ß§Ù§Ú§ñ §Õ§à§Ý§Ø§ß§Ñ §á§à§ã§ä§Ñ§Ó§Ý§ñ§ä§î§ã§ñ §ã§à §Ó§ã§Ö§Þ§Ú
+         §Ü§à§á§Ú§ñ§Þ§Ú §æ§Ñ§Û§Ý§à§Ó.
+     iv. §Õ§à§Ü§å§Þ§Ö§ß§ä§Ñ§è§Ú§ñ §á§â§à§Ô§â§Ñ§Þ§Þ§í §Õ§à§Ý§Ø§ß§Ñ §ã§à§Õ§Ö§â§Ø§Ñ§ä§î §å§Ó§Ö§Õ§à§Þ§Ý§Ö§ß§Ú§Ö §à§Ò
+         §Ú§ã§ä§à§é§ß§Ú§Ü§Ö §æ§Ñ§Û§Ý§à§Ó.
+ e. §¬§à§Þ§Þ§Ö§â§é§Ö§ã§Ü§Ú§Ö WWW §ã§Ö§â§Ó§Ö§â§Ñ
+    §©§Ñ§á§â§Ö§ë§Ö§ß§à §á§â§Ö§Õ§à§ã§ä§Ñ§Ó§Ý§ñ§ä§î §Õ§à§ã§ä§å§á §Ü §ã§à§Õ§Ö§â§Ø§Ú§Þ§à§Þ§å §ï§ä§Ú§ç §æ§Ñ§Û§Ý§à§Ó §é§Ö§â§Ö§Ù
+    WWW §ã§Ö§â§Ó§Ö§â§Ñ §ß§Ñ §á§Ý§Ñ§ä§ß§à§Û §à§ã§ß§à§Ó§Ö, §Ò§Ö§Ù §á§â§Ö§Õ§Ó§Ñ§â§Ú§ä§Ö§Ý§î§ß§à§Ô§à §â§Ñ§Ù§â§Ö§ê§Ö§ß§Ú§ñ §à§ä
+    §Ó§Ý§Ñ§Õ§Ö§Ý§î§è§Ñ §Ñ§Ó§ä§à§â§ã§Ü§Ú§ç §á§â§Ñ§Ó. §´§Ñ§Ü§à§Ö §â§Ñ§Ù§â§Ö§ê§Ö§ß§Ú§Ö §á§â§Ö§Õ§à§ã§ä§Ñ§Ó§Ý§ñ§Ö§ä§ã§ñ
+    §Ó §à§Ò§Þ§Ö§ß §ß§Ñ §á§â§à§è§Ö§ß§ä §à§ä §Õ§à§ç§à§Õ§à§Ó §á§à§Ý§å§é§Ñ§Ö§Þ§í§ç §Ù§Ñ §ä§Ñ§Ü§Ú§Ö §å§ã§Ý§å§Ô§Ú. §£§ã§Ö §å§ã§Ý§à§Ó§Ú§ñ
+    §à§ä§ß§à§ã§ñ§ë§Ú§Ö§ã§ñ §Ü §Ò§Ö§ã§á§Ý§Ñ§ä§ß§í§Þ WWW §ã§Ö§â§Ó§Ö§â§Ñ§Þ §ä§Ñ§Ü§Ø§Ö §Ó §á§à§Ý§ß§à§Û §Þ§Ö§â§Ö §à§ä§ß§à§ã§ñ§ä§ã§ñ
+    §Ú §Ü §á§Ý§Ñ§ä§ß§í§Þ.
+ f. §¬§à§Þ§Þ§Ö§â§é§Ö§ã§Ü§Ú§Ö §á§â§à§Ô§â§Ñ§Þ§Þ§ß§í§Ö §á§â§à§Õ§å§Ü§ä§í
+    §©§Ñ§á§â§Ö§ë§Ö§ß§à §Ó§Ü§Ý§ð§é§Ñ§ä§î §ã§à§Õ§Ö§â§Ø§Ú§Þ§à§Ö §ï§ä§Ú§ç §æ§Ñ§Û§Ý§à§Ó §Ó §á§â§à§Ô§â§Ñ§Þ§Þ§ß§í§Ö §á§Ñ§Ü§Ö§ä§í(+)
+    §â§Ñ§ã§á§â§à§ã§ä§â§Ñ§ß§ñ§Ö§Þ§í§Ö §ß§Ñ §Ü§à§Þ§Þ§Ö§â§é§Ö§ã§Ü§à§Û §à§ã§ß§à§Ó§Ö §Ú§Ý§Ú §Ú§ã§á§à§Ý§î§Ù§å§Ö§Þ§í§Ö §ï§Ü§ã§Ü§Ý§ð§Ù§Ú§Ó§ß§à
+    §Ó§ß§å§ä§â§Ú §Ü§à§Þ§á§Ñ§ß§Ú§Ú §Ú§Ý§Ú §à§â§Ô§Ñ§ß§Ú§Ù§Ñ§è§Ú§Ú §Ò§Ö§Ù §á§â§Ö§Õ§Ó§Ñ§â§Ú§ä§Ö§Ý§î§ß§à§Ô§à §â§Ñ§Ù§â§Ö§ê§Ö§ß§Ú§ñ §à§ä
+    §Ó§Ý§Ñ§Õ§Ö§Ý§î§è§Ñ §Ñ§Ó§ä§à§â§ã§Ü§Ú§ç §á§â§Ñ§Ó. §¯§Ö-§ï§Ü§ã§Ü§Ý§ð§Ù§Ú§Ó§ß§à§Ö §â§Ñ§Ù§â§Ö§ê§Ö§ß§Ú§Ö §ß§Ñ §Ó§Ü§Ý§ð§é§Ö§ß§Ú§Ö
+    §æ§Ñ§Û§Ý§à§Ó §á§â§Ö§Õ§à§ã§ä§Ñ§Ó§Ý§ñ§Ö§ä§ã§ñ §Ó §à§Ò§Þ§Ö§ß §ß§Ñ §à§Õ§ß§à§â§Ñ§Ù§à§Ó§å§ð §à§á§Ý§Ñ§ä§å §Ó§Ý§Ñ§Õ§Ö§Ý§î§è§å
+    §Ñ§Ó§ä§à§â§ã§Ü§Ú§ç §á§â§Ñ§Ó §Ú§Ý§Ú §á§â§à§è§Ö§ß§ä §ã §á§â§à§Õ§Ñ§Ø. §£§ã§Ö §å§ã§Ý§à§Ó§Ú§ñ §à§ä§ß§à§ã§ñ§ë§Ú§Ö§ã§ñ §Ü
+    §á§â§à§Ô§â§Ñ§Þ§Þ§Ñ§Þ, §â§Ñ§ã§á§â§à§ã§ä§â§Ñ§ß§ñ§Ö§Þ§í§Þ §á§à §á§â§Ú§ß§è§Ú§á§å "shareware", §ä§Ñ§Ü§Ø§Ö §Ó §á§à§Ý§ß§à§Û
+    §Þ§Ö§â§Ö §à§ä§ß§à§ã§ñ§ä§ã§ñ §Ú §Ü §Ü§à§Þ§Þ§Ö§â§é§Ö§ã§Ü§Ú§Þ §á§â§à§Ô§â§Ñ§Þ§Þ§ß§í§Þ §á§â§à§Õ§å§Ü§ä§Ñ§Þ.
+    (+) §£ §ï§ä§à§Û §ã§Ö§Ü§è§Ú§Ú "§Ó§Ü§Ý§ð§é§Ö§ß§Ú§Ö§Þ §Ó §á§â§à§Ô§â§Ñ§Þ§Þ§ß§í§Ö §á§Ñ§Ü§Ö§ä§í" §ã§é§Ú§ä§Ñ§Ö§ä§ã§ñ
+    §á§â§Ú§ã§á§à§ã§à§Ò§Ý§Ö§ß§Ú§Ö §á§â§à§Ô§â§Ñ§Þ§Þ§ß§à§Ô§à §á§â§à§Õ§å§Ü§ä§Ñ §Õ§Ý§ñ §â§Ñ§Ò§à§ä§í §ã§à §ã§Ý§à§Ó§Ñ§â§ß§í§Þ§Ú
+    §æ§Ñ§Û§Ý§Ñ§Þ§Ú §Ú, §à§Ò§í§é§ß§à, §Ó§Ü§Ý§ð§é§Ö§ß§Ú§Ö §ã§Ñ§Þ§Ú§ç §æ§Ñ§Û§Ý§à§Ó §Ó §Ü§à§Þ§á§Ý§Ö§Ü§ä §á§à§ã§ä§Ñ§Ó§Ü§Ú.
+    §£ §ã§Ý§å§é§Ñ§Ö §Ö§ã§Ý§Ú §á§â§à§Ô§â§Ñ§Þ§Þ§ß§í§Û §á§â§à§Õ§å§Ü§ä §Ò§í§Ý §ã§à§Ù§Õ§Ñ§ß §Ó §à§ã§ß§à§Ó§ß§à§Þ §Õ§Ý§ñ §â§Ñ§Ò§à§ä§í
+    §ã §Õ§â§å§Ô§Ú§Þ§Ú §ã§Ý§à§Ó§Ñ§â§ß§í§Þ§Ú §æ§Ñ§Û§Ý§Ñ§Þ§Ú, §Ñ§Õ§Ñ§á§ä§Ú§â§à§Ó§Ñ§ß§ß§í§Ö §Ó§Ö§â§ã§Ú§Ú §æ§Ñ§Û§Ý§à§Ó §å§á§à§Þ§ñ§ß§å§ä§í§ç
+    §Ó §ï§ä§à§Þ §Ý§Ú§è§Ö§ß§Ù§Ú§à§ß§ß§à§Þ §ã§à§Ô§Ý§Ñ§ê§Ö§ß§Ú§Ú §Þ§à§Ô§å§ä §Ò§í§ä§î §á§â§Ö§Õ§à§ã§ä§Ñ§Ó§Ý§Ö§ß§í §ß§Ñ §Ò§Ö§ã§á§Ý§Ñ§ä§ß§à§Û
+    §à§ã§ß§à§Ó§Ö §Ó §ã§à§à§ä§Ó§Ö§ä§ã§ä§Ó§Ú§Ú §ã §å§ã§Ý§à§Ó§Ú§ñ§Þ§Ú §å§á§à§Þ§ñ§ß§å§ä§í§Þ§Ú §Ó §ã§Ö§Ü§è§Ú§Ú "§¢§Ö§ã§á§Ý§Ñ§ä§ß§à§Ö
+    §â§Ñ§ã§á§â§à§ã§ä§â§Ñ§ß§Ö§ß§Ú§Ö". §£§Ü§Ý§ð§é§Ö§ß§Ú§Ö §ï§ä§Ú§ç §æ§Ñ§Û§Ý§à§Ó §Ó §à§ã§ß§à§Ó§ß§å§ð §á§à§ã§ä§Ñ§Ó§Ü§å
+    §Ú§Ý§Ú §Õ§à§á§à§Ý§ß§Ú§ä§Ö§Ý§î§ß§å§ð §à§á§Ý§Ñ§é§Ú§Ó§Ñ§Ö§Þ§å§ð §á§à§ã§ä§Ñ§Ó§Ü§å §â§Ñ§ã§ã§Þ§Ñ§ä§â§Ú§Ó§Ñ§Ö§ä§ã§ñ §Ü§Ñ§Ü
+    §Ó§Ü§Ý§ð§é§Ö§ß§Ú§Ö §Ó §á§â§à§Ô§â§Ñ§Þ§Þ§ß§í§Û §á§Ñ§Ü§Ö§ä §Ú §ä§â§Ö§Ò§å§Ö§ä §ã§à§à§ä§Ó§Ö§ä§ã§ä§Ó§å§ð§ë§Ö§Ô§à §Ý§Ú§è§Ö§ß§Ù§Ú§â§à§Ó§Ñ§ß§Ú§ñ.
+ h. §±§å§Ò§Ý§Ú§Ü§å§Ö§Þ§í§Ö §ã§Ý§à§Ó§Ñ§â§Ú
+    §³§à§Õ§Ö§â§Ø§Ú§Þ§à§Ö §ï§ä§Ú§ç §æ§Ñ§Û§Ý§à§Ó §Ù§Ñ§á§â§Ö§ë§Ö§ß§à §á§å§Ò§Ý§Ú§Ü§à§Ó§Ñ§ä§î §ß§Ñ §Ò§å§Þ§Ñ§Ô§Ö §Ú§Ý§Ú §á§â§à§é§Ú§ç
+    §ß§à§ã§Ú§ä§Ö§Ý§ñ§ç, §ä§Ñ§Ü§Ú§ç §Ü§Ñ§Ü CD-ROM, §Ò§Ö§Ù §á§â§Ö§Õ§Ó§Ñ§â§Ú§ä§Ö§Ý§î§ß§à§Ô§à §â§Ñ§Ù§â§Ö§ê§Ö§ß§Ú§ñ §à§ä
+    §Ó§Ý§Ñ§Õ§Ö§Ý§î§è§Ñ §Ñ§Ó§ä§à§â§ã§Ü§Ú§ç §á§â§Ñ§Ó.
+
+(*) §­§Ú§è§Ñ §Ú§Ý§Ú §à§â§Ô§Ñ§ß§Ú§Ù§Ñ§è§Ú§Ú §â§Ñ§ã§á§â§à§ã§ä§â§Ñ§ß§ñ§ð§ë§Ú§Ö §Ü§à§á§Ú§Ú §Ú§Ý§Ú §Ó§í§Õ§Ö§â§Ø§Ü§Ú §Ú§Ù §æ§Ñ§Û§Ý§à§Ó
+§á§à§á§Ñ§Õ§Ñ§ð§ë§Ú§Ö §á§à§Õ §ï§ä§Ú §Ü§Ñ§ä§Ö§Ô§à§â§Ú§Ú, §Þ§à§Ô§å§ä §Õ§Ö§Ý§Ñ§ä§î §ï§ä§à §Ò§Ö§Ù §æ§à§â§Þ§Ñ§Ý§î§ß§à§Ô§à §Ù§Ñ§á§â§à§ã§Ñ
+§Ú §â§Ñ§Ù§â§Ö§ê§Ö§ß§Ú§ñ §à§ä §Ó§Ý§Ñ§Õ§Ö§Ý§î§è§Ñ §Ñ§Ó§ä§à§â§ã§Ü§à§Ô§à §á§â§Ñ§Ó§Ñ, §ß§à §Ó§Ý§Ñ§Õ§Ö§Ý§Ö§è §Ñ§Ó§ä§à§â§ã§Ü§à§Ô§à
+§á§â§Ñ§Ó§Ñ §Ò§í§Ý §Ò§í §Ò§Ý§Ñ§Ô§à§Õ§Ñ§â§Ö§ß §Ù§Ñ §Ú§Ù§Ó§Ö§ë§Ö§ß§Ú§ñ §à §â§Ñ§ã§á§â§à§ã§ä§â§Ñ§ß§Ö§ß§Ú§Ú.
+
+§£§ß§Ú§Þ§Ñ§ß§Ú§Ö! §¥§à§Ò§Ñ§Ó§Ý§Ö§ß§Ú§Ö §Þ§Ñ§ä§Ö§â§Ú§Ñ§Ý§à§Ó §Ó §æ§Ñ§Û§Ý§í §Ú§Ý§Ú §ã§à§Ù§Õ§Ñ§ß§Ú§Ö §Ó§í§Õ§Ö§â§Ø§Ö§Ü §ß§Ú §Ó §Ü§à§Ö§Þ
+§ã§Ý§å§é§Ñ§Ö §ß§Ö §à§ä§Þ§Ö§ß§ñ§Ö§ä §Ú§Ý§Ú §Ü§Ñ§Ü§Ú§Þ-§Ý§Ú§Ò§à §à§Ò§â§Ñ§Ù§à§Þ §å§ë§Ö§Þ§Ý§ñ§Ö§ä §Ñ§Ó§ä§à§â§ã§Ü§Ú§Ö §á§â§Ñ§Ó§Ñ
+§Ó§Ý§Ñ§Õ§Ö§Ý§î§è§Ñ §Ñ§Ó§ä§à§â§ã§Ü§Ú§ç §á§â§Ñ§Ó §ß§Ñ §ï§ä§Ú §æ§Ñ§Û§Ý§í.
+
+§©§Ñ§á§â§à§ã§í
+
+§£§ã§Ö §Ù§Ñ§á§â§à§ã§í §Ó§í§ã§í§Ý§Ñ§Û§ä§Ö §ß§Ñ §Ñ§Õ§â§Ö§ã:
+Oleg V. Volkov &lt;jr-edict@mail.ru&gt;

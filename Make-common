@@ -1,0 +1,101 @@
+#
+# Copyright (C) 2004-2010 Hannes Loeffler
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2, or (at your option)
+# any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+
+
+
+# Nihongo FTP server
+FTP_SERVER = http://ftp.monash.edu.au/pub/nihongo
+#FTP_SERVER = rsync://ftp.monash.edu.au
+
+# install directory
+#INSTALLDIR = /usr/local/share/dict
+
+DOWNLOAD = /usr/bin/wget -nv
+#DOWNLOAD = /usr/bin/rsync -dulvc
+DOWNLOAD_DEST =
+
+EBZIP = ${HOME}/usr/bin/ebzip -l 5
+
+# parser program
+FPWPARSER = cnvdic.pl
+
+TODAY = $(shell date '+%Y-%m-%d_%Z')
+
+
+# alternative install target
+.PHONY: install2 distclean distrib distrib-ebzip
+
+distclean: clean
+	rm -rf ${DIR} ${DISTCLEANEXTRA}
+
+install2: all catalogs ${PACKAGEDEPS}
+	${MKDIRHIER} ${INSTALLDIR2}
+	${CPHIER} catalogs ${INSTALLDIR2}/${CATALOGS}
+	chmod 0644 ${INSTALLDIR2}/${CATALOGS}
+	${MKDIRHIER} ${INSTALLDIR2}/${DIR2}/${DATA_DIR}
+	${CPHIER} honmon ${INSTALLDIR2}/${DIR2}/${DATA_DIR}/${HONMON}
+
+	for file in gai16h gai24h gai30h gai48h gai16f gai24f gai30f gai48f ; do \
+	  if [ -f $$file ] ; then \
+	    if [ ${GAIJI_UC} -gt 0 ]; then \
+	      dstfile=`echo $$file | tr a-z A-Z` ; \
+	    else \
+	      dstfile=$$file ; \
+	    fi ; \
+	    ${MKDIRHIER} ${INSTALLDIR2}/${DIR2}/${GAIJI_DIR} ; \
+	    ${CPHIER} $$file ${INSTALLDIR2}/${DIR2}/${GAIJI_DIR}/$$dstfile ; \
+	    chmod 0644 ${INSTALLDIR2}/${DIR2}/${GAIJI_DIR}/$$dstfile ; \
+	  fi ; \
+	done
+
+	for file in ${PACKAGEEXTRA} ; do \
+           case $$file in \
+           *=*) srcfile="`echo $$file | sed 's/=.*//'`" ; \
+                dstfile="`echo $$file | sed 's/.*=//'`" ; \
+                ${CPHIER} $$srcfile ${INSTALLDIR2}/$$dstfile ; \
+                [ -f ${INSTALLDIR2}/$$dstfile ] && chmod 0644 ${INSTALLDIR2}/$$dstfile ; \
+		;; \
+           *)   ${CPHIER} $$file ${INSTALLDIR2}/$$file ; \
+                [ -f ${INSTALLDIR2}/$$file ] && chmod 0644 ${INSTALLDIR2}/$$file ; \
+		;; \
+           esac ; \
+        done
+
+# create tar archive for distribution of the dictionary
+distrib:
+	rm -rf ${DIR}
+	rm -f ${DISTRIB}
+	${MAKE} INSTALLDIR="." install2
+	chmod 0755 ${DIR} ${DIR}/${DIR2} ${DIR}/${DIR2}/${DATA_DIR}
+	tar cfvz ${DISTRIB} ${DIR}
+
+distrib-ebzip:
+	rm -rf ${DIR}
+	rm -f ${DISTRIB_EBZIP}
+	${MAKE} INSTALLDIR="." install2
+	chmod 0755 ${DIR} ${DIR}/${DIR2} ${DIR}/${DIR2}/${DATA_DIR}
+	cd ${DIR}; ${EBZIP}
+	tar cfv ${DISTRIB_EBZIP} ${DIR}
+
+copy-all: distrib distrib-ebzip
+	if [ -d "${dict_home}" ]; then \
+	  mv ${DISTRIB} "${dict_home}"; \
+	  mv ${DISTRIB_EBZIP} "${dict_home}"; \
+	fi
+
+create-distrib: distrib distrib-ebzip
+	if [ -d "${dict_home}" ]; then \
+	  mv ${DISTRIB} "${dict_home}"; \
+	  mv ${DISTRIB_EBZIP} "${dict_home}"; \
+	fi

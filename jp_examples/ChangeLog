@@ -1,0 +1,59 @@
+2011-01-04 Hannes Loeffler <hal@hloeffler.info>
+
+  * minor changes
+
+2010-12-20 Hannes Loeffler <hal@hloeffler.info>
+
+  * jp_examples-fpw1.4.0
+  * some changes in the Makefile
+  * check for JIS X 0212 kanji
+
+2008-11-27 Hannes Loeffler <hal@hloeffler.info>
+
+  * jp_examples-fpw1.3.2
+  * added install2 target to Makefile, some cleanup
+  * remove IDs
+
+2007-03-02 Hannes Loeffler <hal@hloeffler.info>
+
+  * jp_examples-fpw1.3.1
+  * the form of appearance of an entry was introduced in a recent modification:
+    remove it to generate unique keys
+
+2006-02-27 Hannes Loeffler <hal@hloeffler.info>
+
+  * examples from Feb 26, 2006
+
+2005-04-07 Hannes Loeffler <hal@hloeffler.info>
+
+  * corrections for newer version of MarkupInterface
+
+2005-03-07 Hannes Loeffler <hal@hloeffler.info>
+
+  * converted to MarkupInterface
+  * bug fix: didn't delete brackets
+
+2005-02-01 Hannes Loeffler <hal@hloeffler.info>
+
+  * jp_examples-fpw1.3
+  * added SHORT flag in Makefile (for example_s.gz)
+  * modified Makefile for FreePWING 1.4.4
+  * rename --small to --prune
+
+2005-01-07 Hannes Loeffler <hal@hloeffler.info>
+
+  * examples from Jan 06, 2005
+
+jp_examples-fpw1.2
+
+  * examples from Oct 21, 2004
+  * indexed also by kana (converted with kakasi)
+  * optionally remove duplicates (both Japanese and English)
+  * English sentences in italics (if supported by viewer)
+  * added superscripts
+  * removed separate indexing for kana in parenthesis
+  * small bug fixes
+
+jp_examples-fpw1.1
+
+  * no public release

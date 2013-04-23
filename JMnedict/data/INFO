@@ -1,0 +1,50 @@
+ENAMDICT/JMnedict
+Japanese Proper Names Dictionary Files
+
+Copyright (C) 2003 The Electronic Dictionary Research and Development Group, Monash University.
+
+Introduction
+
+The ENAMDICT/JMnedict files contain Japanese proper names; place-names, surnames, given names, (some) comapny names and product names. These were originally included in the EDICT file, along with other non-name entries. By late 1995, the number of name entries had exceeded the others, and the file was becoming unmanageably large, so the decision was made to split it. (The split was done automatically, and may have been imperfectly performed. Please notify any errors.) From this split came the ENAMDICT file.
+
+The JMnedict (Japanese Multilingual Named Entity Dictionary) is simply the ENAMDICT file reformatted into an XML file in UTF-8 coding. It also has a small number or names which use kanji from the JIS X 0212 character set.
+
+Format
+
+The format of the ENAMDICT file is exactly the same as the EDICT file, and the EDICT documention should be consulted for more information.
+
+Most software which uses the EDICT file can also handle other files, however there is some software, such as MacJDic, which can only handle a single file. In such cases, users can concatenate EDICT and ENAMDICT to create a single file.
+
+Note that with the release of ENAMDICT V97-001, the tagging of names has now changed. The old (sur), (giv), etc. has been replaced with single- letter codes, without the old redundancies. The codes, as of release V2000-01, are:
+
+s - surname
+p - place-name
+u - person name, as-yet unclassified
+g - given name, as-yet not classified by sex
+f - female given name
+m - male given name
+h - a full (family plus given) name of a historical person
+
+In addition, a number of country-names are added in parentheses after place-names.
+
+The JMnedict is structured according to its DTD, which is at the front of the file.
+
+Downloads
+
+The files can be downloaded from the Monash ftp site: enamdict.gz and JMnedict.xml.gz
+
+Jim Breen
+jwb@csse.monash.edu.au
+School of Computer Science and Software Engineering
+Monash University, Clayton 3168, Victoria, Australia
+July 2003
+
+APPENDIX
+
+ENAMDICT COPYRIGHT STATEMENT
+
+In March 2000, James William Breen assigned ownership of the copyright of the dictionary files assembled, coordinated and edited by him to the The Electronic Dictionary Research and Development Group at Monash University.
+
+Information about the formal usage arrangement for ENAMDICT can be found on the Group's WWW page.
+
+In summary, ENAMDICT can be freely used provided satisfactory acknowledgement is made, and a number of other conditions are met.

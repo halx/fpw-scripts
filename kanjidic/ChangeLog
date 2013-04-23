@@ -1,0 +1,146 @@
+2010-12-20 Hannes Loeffler <hal@hloeffler.info>
+
+  * kanjidic-fpw1.7.3
+  * some Makefile updates
+
+2010-11-25 Hannes Loeffler <hal@hloeffler.info>
+
+  * some Makefile updates and new targets
+
+2005-04-07 Hannes Loeffler <hal@hloeffler.info>
+
+  * added <nl> after bitmap
+
+2005-03-24 Hannes Loeffler <hal@hloeffler.info>
+
+  * kanjidic-fpw1.7.2
+  * fixed non-EUC-JP conversion
+
+2005-03-16 Hannes Loeffler <hal@hloeffler.info>
+
+  * kanjidic-fpw1.7.1
+  * used characters instead of gaiji where available (sub to_euc)
+  * minor changes
+
+2005-03-15 Hannes Loeffler <hal@hloeffler.info>
+
+  * basic link check (not all xrefs are contained in kanjidic)
+  * some code cleanup
+
+2005-03-14 Hannes Loeffler <hal@hloeffler.info>
+
+  * kanjidic-fpw1.7
+
+2005-03-07 Hannes Loeffler <hal@hloeffler.info>
+
+  * moved markup interface to separate module
+  * removed statistics (for now)
+
+2005-03-03 Hannes Loeffler <hal@hloeffler.info>
+
+  * search by radical: prefixed kanji list with residual stroke count
+  * also prefixed search kanji lists with stroke count
+
+2005-03-02 Hannes Loeffler <hal@hloeffler.info>
+
+  * minor changes (code cleanup)
+
+2005-03-01 Hannes Loeffler <hal@hloeffler.info>
+
+  * implemented search by radical via menu
+
+2005-02-28 Hannes Loeffler <hal@hloeffler.info>
+
+  * mostly finished work on markup
+
+2005-02-26 Hannes Loeffler <hal@hloeffler.info>
+
+  * continued on working on markup
+
+2005-02-25 Hannes Loeffler <hal@hloeffler.info>
+
+  * removed degree sign as mark for classical radicals
+  * started implementing and parsing markup via HTML::TokeParser
+
+2005-02-21 Hannes Loeffler <hal@hloeffler.info>
+
+  * added classical radicals to B/C codes
+  * corrected classical radicals 2 and 58
+
+2005-02-18 Hannes Loeffler <hal@hloeffler.info>
+
+  * minor changes (code cleanup)
+
+2005-02-09 Hannes Loeffler <hal@hloeffler.info>
+
+  * some code cleanup
+  * bug fix: index also conditional keys with full okurigana
+
+2005-02-08 Hannes Loeffler <hal@hloeffler.info>
+
+  * modified Makefile for FreePWING 1.4.4
+  * added large bitmaps for kanji display
+
+2005-01-25 Hannes Loeffler <hal@hloeffler.info>
+
+  * kanjidic-fpw1.6
+
+2005-01-06 Hannes Loeffler <hal@hloeffler.info>
+
+  * exchanged all non JIS208 radicals and component elements with gaiji
+
+2004-12-10 Hannes Loeffler <hal@hloeffler.info>
+
+  * added version information to README
+  * more corrections in radicals/component elements
+  * indexed with full okurigana, prefixes and suffixes with "-"
+  * added Portuguese version
+  * added cross references to JIS208, De Roo, Spahn & Hadamitzky, and
+    "Classic" Nelson variants
+  * removed N from non-unique codes
+
+2004-11-24 Hannes Loeffler <hal@hloeffler.info>
+
+  * kanjidic-fpw1.5
+  * added radicals/component elements to output and conditional search keys
+  * replaced INFO with kanjidic.doc (complete documentation)
+  * created links in README pointing to INFO
+  * added component element information with links to README
+  * added information about classical Kangxi radicals
+
+2004-11-01 Hannes Loeffler <hal@hloeffler.info>
+
+  * kanjidic-fpw1.4
+  * added gaiji bitmaps
+
+2004-10-27 Hannes Loeffler <hal@hloeffler.info>
+
+  * kanjidic-fpw1.3.1
+  * added Spanish version
+  * only B, C, G, N, P, S, and DR codes for conditional search
+  * fixed reading-keyword bug (period not removed)
+  * fixed duplicate kanji bug in translation indexing
+  * small changes and corrections in formatting and documentation
+  * script: added --addCK, --printcodes and --keycodes
+  * script: unified script for all three languages
+
+version 1.3
+
+  * added keyword search (conditional search with multiple keys)
+  * fixed stroke count bug
+
+version 1.2
+
+  * search by reading: made all kanji links and ordered kanji by stroke count
+  * added chinese and korean reading
+  * fixed T2 bug
+  * fix for Henshall bug in German KANJIDIC
+  * reorganized and corrected documentation
+
+version 1.1
+
+  * first public release
+
+version 1.0
+
+  * first test version

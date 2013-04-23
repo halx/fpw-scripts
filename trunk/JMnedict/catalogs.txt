@@ -1,0 +1,10 @@
+[Catalog]
+FileName   = catalogs
+Type       = EPWING1
+Books      = 1
+
+[Book]
+Title      = "Ì¾¼­Åµ"
+BookType   = 6001
+Directory  = "JMnedict"
+HanGaiji   = "gai16h"

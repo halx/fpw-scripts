@@ -1,0 +1,44 @@
+2011-01-17 Hannes Loeffler <hal@hloeffler.info>
+
+  * version 0.5.0
+  * added sound support
+  * added JPEG support
+
+2010-11-24 Hannes Loeffler <hal@hloeffler.info>
+
+  * version 0.4.0
+  * better error routines
+
+2005-03-16 Hannes Loeffler <hal@hloeffler.info>
+
+  * version 0.3.1
+  * fixed parameter bug in encoding routine
+
+2005-03-14 Hannes Loeffler <hal@hloeffler.info>
+
+  * version 0.3.0
+  * encoding/decoding of unsafe characters via HTML::Entities
+
+2005-03-13 Hannes Loeffler <hal@hloeffler.info>
+
+  * version 0.2.0
+  * small correction in documentation
+
+2005-03-09 Hannes Loeffler <hal@hloeffler.info>
+
+  * added documentation
+  * implemented dynamic creation of objects (no more explicit initialize
+    and finalize)
+
+2005-03-08 Hannes Loeffler <hal@hloeffler.info>
+
+  * fixed bug in parsing of <heading>
+  * bug fix: unused FreePWING features must not be initialized
+
+2005-03-07 Hannes Loeffler <hal@hloeffler.info>
+
+  * changed "heading" from attribute to independent tag
+
+2005-03-07 Hannes Loeffler <hal@hloeffler.info>
+
+  * initial version 0.1.0

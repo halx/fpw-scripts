@@ -1,0 +1,2 @@
+* kanjidic: convert to kanjidic2 (XML), use xml2edict
+* JMdict: clean up output, do not expand entitities?

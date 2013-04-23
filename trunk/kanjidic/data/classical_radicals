@@ -1,0 +1,235 @@
+# the 214 classical Kangxi radicals (taken from http://www.nuthatch.com/ and
+# corrected by Hannes Loeffler <hal@hloeffler.info>)
+#
+# NOTE: names and meanings should be checked!
+#
+S1
+1/一/いち/one
+2/｜/ぼう/down stroke
+3/丶/てん/dot
+4/丿/の,のかんむり/left stroke
+5/乙/おつ/fish hook
+6/亅/はねぼう/feathered stick barb
+S2
+7/二/に/two
+8/亠/なべぶた/lid
+9/人/ひと/person
+10/儿/にんにょう,ひとあし/human legs
+11/入/いる/enter
+12/八/はちがしら/eight
+13/冂/まきがまえ,えながまえ,どうがまえ,けいがまえ/border
+14/冖/わかんむり,べきかんむり/cover
+15/冫/にすい/water drops
+16/几/つくえ/table enclosure
+17/凵/うけばこ,かんにょう/open box enclosure
+18/刀/かたな/sword
+19/力/ちから/strength
+20/勹/つつみがまえ/wrapping
+21/匕/さじのひ/spoon
+22/匚/はこがまえ/sideways box
+23/匸/かくしがまえ/hiding enclosure
+24/十/じゅう/cross
+25/卜/ぼくのと/divining rod
+26/卩/ふしづくり/seal
+27/厂/がんだれ/cliff
+28/厶/む/myself
+29/又/また/furthermore
+S3
+30/口/くち/mouth
+31/囗/くにがまえ/enclosure
+32/土/つち/earth
+33/士/さむらい/samurai
+34/夂/ふゆがしら/descend
+35/夊/すいにょう/move slowly
+36/夕/ゆうべ/evening
+37/大/だい/big
+38/女/おんな/woman
+39/子/こ/child
+40/宀/うかんむり/crown
+41/寸/すん/inch
+42/小/ちいさい/little
+43/尢/だいのまげあし,もっとも/crooked-big
+44/尸/しかばね,しかばねかんむり/flag
+45/屮/ふるくさ/old grass
+46/山/やま/mountain
+47/巛/まがりがわ/river
+48/工/たくみ/craft
+49/己/おのれ/self
+50/巾/はば/cloth
+51/干/はす/dry
+52/幺/いとがしら,ようへん/short thread
+53/广/まだれ/dotted cliff
+54/廴/いんにょう,えんにょう/long stride
+55/廾/にじゅうあし/twenty
+56/弋/しきがまえ/ceremony
+57/弓/ゆみ/bow
+58/彑/けいがしら/pig head
+59/彡/さんづくり,かみかぎり/tuft
+60/彳/ぎょうにんべん/walking man
+S4
+61/心/りっしんべん/heart
+62/戈/かのほこ/spear
+63/戸/とびらのと/door
+64/手/て/hand
+65/支/しんよう,じゅうまた/branch
+66/攴/ぼくづくり,ぼくにょう,とまた/strike
+67/文/ぶんにょう/sentence
+68/斗/とます/measure
+69/斤/おの/axe
+70/方/ほう/direction
+71/无/むにょう,む,なし/without
+72/日/にち/sun
+73/曰/ひらび/past
+74/月/つき/moon
+75/木/き/tree
+76/欠/あくび/gap
+77/止/とめる/stop
+78/歹/がつへん,いちたへん,しにがまえ/death
+79/殳/ほこつくり,るまた/club
+80/毋/なかれ,かんのはは/mother
+81/比/くらべるひ/comparison
+82/毛/け/wool
+83/氏/うじ/clan
+84/气/きがまえ/vapour
+85/水/みず/water
+86/火/ひ/fire
+87/爪/つめ/claw
+88/父/ちち/father
+89/爻/めめ/double X
+90/爿/しょうへん/left-side kata
+91/片/かた/one-sided leaf
+92/牙/きばへん/fang
+93/牛/うし/cow
+94/犬/いぬ/dog
+S5
+95/玄/げん/mysterious
+96/玉/うし/jewel
+97/瓜/うり/melon
+98/瓦/かわら/tile
+99/甘/あまい/sweet
+100/生/うまれる/life
+101/用/もちいる/usage
+102/田/た/field
+103/疋/ひき/head count
+*104/疔/やまいだれ/sick
+105/癶/はつがしら/spread legs
+106/白/しろ/white
+107/皮/けがわ/skin
+108/皿/さら/dish
+109/目/め/eye
+110/矛/むのほこ/lance
+111/矢/や/arrow
+112/石/いし/stone
+113/示/しめす/show
+*114/禹/ぐうのあし/track
+115/禾/のぎ/growing grain
+116/穴/あな/hole
+117/立/たつ/stand
+S6
+118/竹/たけ/bamboo
+119/米/こめ/rice
+120/糸/いと/thread
+121/缶/ほとぎ/can
+122/网/あみがしら,よんかしら/net
+123/羊/ひつじ/sheep
+124/羽/はね/feathers
+125/老/おい/old person
+126/而/しかして/rake
+127/耒/らいすき/plow
+128/耳/みみ/ear
+129/聿/ふでづくり/writing brush
+130/肉/にく/meat
+131/臣/しん/retainer
+132/自/みずから/oneself
+133/至/いたる/arrive
+134/臼/うす/mortar
+135/舌/した/tongue
+136/舛/まい,まいあし/dance
+137/舟/ふね/ship
+138/艮/うしとら,ねずるり/good
+139/色/いろ/color
+140/艸/くさかんむり/grass
+141/虍/とらかんむり,とらがしら/tiger
+142/虫/むし/bug
+143/血/ち/blood
+144/行/ぎょう/journey
+145/衣/ころも/clothing
+146/襾/にし/cover
+S7
+147/見/みる/see
+148/角/つの/corner
+149/言/ことば/say
+150/谷/たに/valley
+151/豆/まめ/bean
+152/豕/いのこ/pig
+153/豸/むじなへん/wild animal
+154/貝/かい/shellfish
+155/赤/あか/red
+156/走/はしる/run
+157/足/あし/foot
+158/身/み/body
+159/車/くるま/vehicle
+160/辛/からい/spicy hot
+161/辰/しんのたつ/the dragon
+162/辷/しんにゅう/glide
+163/邑/おおざと/city
+164/酉/ひよりのとり/sake
+165/釆/のごめ/separate
+166/里/さと/hamlet
+S8
+167/金/かね/metal
+168/長/ながい/long
+169/門/もん/gate
+170/阜/ぎふのふ/mound
+171/隶/れいづくり/slave
+172/隹/ふるとり/small bird
+173/雨/あめ/rain
+174/青/あう/blue
+175/非/あらず/mistake
+S9
+176/面/めん/face
+177/革/かくのかわ/pelt
+178/韋/なめしがわ/tanned leather
+179/韭/にら/leek
+180/音/おと/sound
+181/頁/おおがい/page
+182/風/かぜ/wind
+183/飛/とぶ/flying
+184/食/しよく/food
+185/首/くび/neck
+186/香/においこう/fragrance
+S10
+187/馬/うま/horse
+188/骨/ほね/bone
+189/高/たかい/high
+190/髟/かみがしら,かみかんむり/long hair
+191/鬥/とうがまえ,たたかいがまえ/broken gate
+192/鬯/ちよう/fragrant herbs
+193/鬲/かく/tripod
+194/鬼/おに/daemon
+S11
+195/魚/うお/fish
+196/鳥/とり/bird
+197/鹵/ろ/salt
+198/鹿/しか/deer
+199/麥/むぎ/wheat
+200/麻/あさ/flax
+S13
+201/黄/きいろ/yellow
+202/黍/きび/millet
+203/黒/くろ/black
+204/黹/ふつ/embroidery
+205/黽/べん/frog
+206/鼎/かなえ/three legged kettle
+207/鼓/つづみ/drum
+208/鼠/ねずみ/mouse
+S14
+209/鼻/はな/nose
+210/齊/せい/equal
+S15
+211/齒/は/tooth
+S16
+212/龍/りゅう/dragon
+213/龜/かめ/turtle
+S17
+214/龠/やく/flute

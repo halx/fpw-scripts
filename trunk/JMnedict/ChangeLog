@@ -1,0 +1,39 @@
+2010-12-19 Hannes Loeffler <hal@hloeffler.info>
+
+  * JMnedict-fpw1.4.0
+  * added gaiji support
+
+2010-11-25 Hannes Loeffler <hal@hloeffler.info>
+
+  * some Makefile updates
+
+2007-03-02 Hannes Loeffler <hal@hloeffler.info>
+
+  * enamdict-fpw1.3.1
+  * some code cleanup
+
+2007-01-29 Hannes Loeffler <hal@hloeffler.info>
+
+  * added station type
+
+2006-02-27 Hannes Loeffler <hal@hloeffler.info>
+
+  * JMnedict from Jul 10, 2005
+  * mask special characters with FreePWING_encode
+
+2005-03-09 Hannes Loeffler <hal@hloeffler.info>
+
+  * converted to MarkupInterface
+  * modified Makefile for FreePWING 1.4.4
+
+2005-01-07 Hannes Loeffler <hal@hloeffler.info>
+
+  * JMnedict from Jan 06, 2005
+
+2004-11-11 Hannes Loeffler <hal@hloeffler.info>
+
+  * enamdict-fpw1.1: based on JMnedict (XML version of ENAMDICT)
+
+version 1.0
+ 
+  * first public release

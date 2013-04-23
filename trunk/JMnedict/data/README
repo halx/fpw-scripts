@@ -1,0 +1,27 @@
+This is a conversion of Jim Breen's ENAMDICT[1] to JIS X 4081 format (an EPWING subset[2]) by Hannes Loeffler <hal@hloeffler.info>.  The code of the conversion script is based on work by Kazuhiko Shiozaki[3] using the FreePWING library[4].
+
+
+The dictionary can be searched in the following ways.
+
+* by kanji: the reading will be given in romaji and codes explaining the name are displayed
+* by romaji: the kanji/kana name will be displayed
+* by kana: kana only names will be displayed including katakana foreign names, search by kanji reading is only possible via romaji
+
+
+The codes have the following meaning:
+
+s  - family or surname
+m  - male given name or forename
+f  - female given name or forename
+g  - given name or forename, gender not specified
+u  - unclassified name
+p  - full name of a particular person
+pl - place name
+c  - company name
+pr - product name
+
+---
+[1] http://www.csse.monash.edu.au/~jwb/enamdict_doc.html
+[2] http://www.epwing.or.jp/
+[3] http://openlab.ring.gr.jp/edict/
+[4] http://www.sra.co.jp/people/m-kasahr/freepwing/

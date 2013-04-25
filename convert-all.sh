@@ -37,27 +37,30 @@ kanjidic_lang="en"
 
 ### functions
 
-# prepend a variable with a value if it exists, otherwise create it with the value
+# prepend a variable with a value if it exists, otherwise create it with the
+# value
 # export the variable
 prepend_path () {
-  if [ -z "$1" -o -z "$2" ]; then
-      echo "Usage: prepend_env var_name value" 1>&2;
-      exit 1
-  fi
+    if [ -z "$1" -o -z "$2" ]; then
+	echo "Usage: prepend_env var_name value" 1>&2;
+	exit 1
+    fi
 
-  name=$1
-  to=$2
+    name=$1
+    to=$2
 
-  case "${!name}" in
-      $to:*|*:$to)
-          ;;
-      *)
-          if [ -z "${!name}" ]; then
-	      export $name="$to"
-	  else
-	      export $name="$to":${!name}
-	  fi
-   esac
+    for dir in $(echo $to | tr ':' ' '); do
+	case "${!name}" in
+	    $dir:*|*:$dir)
+                ;;
+            *)
+	        if [ -z "${!name}" ]; then
+		    export $name="$dir"
+		else
+		    export $name="$dir":${!name}
+		fi
+        esac
+    done
 }
 
 # change to script's directory

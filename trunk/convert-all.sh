@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Copyright (C) 2010 Hannes Loeffler
+# Copyright (C) 2010-2013 Hannes Loeffler
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -20,37 +20,49 @@
 
 
 
+# perlbrew Perl
 if [ -f ~/perl5/perlbrew/etc/bashrc ]; then
   . ~/perl5/perlbrew/etc/bashrc
 fi
 
 # dictionary and language selection
 dictionaries="JMnedict JMdict jp_examples kanjidic"
-JMdict_lang="eng dut"
+
 #JMdict_lang="eng dut fre rus"
-kanjidic_lang="en"
+JMdict_lang="eng dut"
+
 #kanjidic_lang="en es fr pt"
-
-# the FreePWING make utility
-prefix=$HOME/usr
-fpwmake=$prefix/bin/fpwmake
-
-# final destination
-export dict_home=$HOME/dicts
-
-# make sure these environment variables are set correctly
-export FPWING_SHARE=$prefix/share/freepwing
-export LANG=C
-export PATH=$HOME/usr/bin:$PATH
-#export PERL5LIB=$HOME/usr/lib/perl5/5.12.2:$HOME/usr/lib/perl5/site_perl/5.12.2:$PERL5LIB
-export PERL5LIB=$HOME/usr/share/perl:$HOME/usr/lib/perl5/site_perl:$HOME/usr/lib/perl5:$HOME/usr/lib/perl
+kanjidic_lang="en"
 
 
 ### functions
 
+# prepend a variable with a value if it exists, otherwise create it with the value
+# export the variable
+prepend_path () {
+  if [ -z "$1" -o -z "$2" ]; then
+      echo "Usage: prepend_env var_name value" 1>&2;
+      exit 1
+  fi
+
+  name=$1
+  to=$2
+
+  case "${!name}" in
+      $to:*|*:$to)
+          ;;
+      *)
+          if [ -z "${!name}" ]; then
+	      export $name="$to"
+	  else
+	      export $name="$to":${!name}
+	  fi
+   esac
+}
+
 # change to script's directory
 setwd () {
-  local p=`dirname $0`
+  local p=$(dirname $0)
 
   cd $p
 }
@@ -68,6 +80,21 @@ buildall () {
 }
 
 
+# the FreePWING make utility
+prefix=$HOME/usr
+fpwmake=$prefix/bin/fpwmake
+
+# final destination
+export dict_home=$HOME/dicts
+
+# make sure these environment variables are set correctly
+export FPWING_SHARE=$prefix/share/freepwing
+export LANG=C
+
+prepend_path PATH $HOME/usr/bin
+prepend_path PERL5LIB $HOME/usr/lib/perl5/site_perl:$HOME/usr/lib/perl5
+
+
 ### main
 
 # change to work directory
@@ -75,22 +102,22 @@ setwd
 
 # build dictionaries in selected languages
 for dictionary in $dictionaries; do
-  date=`date`
-  echo "          ========== START $dictionary $date =========="
+    date=$(date)
+    echo "          ========== START $dictionary $date =========="
 
-  (
-    cd $dictionary
-    . ./convert.sh   # subscript will see all variables when sourced
-  )
+    (
+	cd $dictionary
+	. ./convert.sh   # subscript will see all variables when sourced
+    )
 
-  err=$?
-  date=`date`
+    err=$?
+    date=$(date)
 
-  if [ 0 -eq $err ]; then
-    echo "          ========== END   $dictionary $date =========="
-    echo
-  else
-    echo "          !!!!!!!!!! ERROR $dictionary $date !!!!!!!!!!"
-    echo
-  fi
+    if [ 0 -eq $err ]; then
+	echo "          ========== END   $dictionary $date =========="
+	echo
+    else
+	echo "          !!!!!!!!!! ERROR $dictionary $date !!!!!!!!!!"
+	echo
+    fi
 done

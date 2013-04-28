@@ -6,4 +6,4 @@ foreach my $s (0, 1) {
   $error = buildall();
 }
 
-$error;
+!$error;

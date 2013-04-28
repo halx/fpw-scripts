@@ -24,6 +24,7 @@ use strict;
 
 use Env qw(HOME PATH);
 use Cwd qw(abs_path getcwd);
+use File::Basename;
 use Time::localtime;
 use Try::Tiny;
 
@@ -105,7 +106,7 @@ sub buildall {
 
 ### main
 
-my $top_dir = abs_path($0);
+my $top_dir = dirname(abs_path($0));
 chdir $top_dir;
 
 my ($date);

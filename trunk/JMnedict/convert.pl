@@ -1,2 +1,5 @@
-buildall();
-1;
+my $error = 0;
+
+$error = buildall();
+
+!$error;

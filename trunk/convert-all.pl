@@ -95,12 +95,17 @@ sub prepend_path {
 
 
 sub dict_clean {
-    print "... cleaning distribution ...\n";
+    print "... fpwmake clean ...\n";
+    return system("$fpwmake clean");
+}
+
+sub dict_distclean {
+    print "... fpwmake distclean ...\n";
     return system("$fpwmake distclean");
 }
 
 sub dict_build {
-    print "... creating distribution ...\n";
+    print "... fpwmake create-distrib ...\n";
     return system("$fpwmake create-distrib");
 }
 
@@ -116,14 +121,15 @@ my ($date, $lang, $error);
 foreach my $dictionary (keys %dictionaries) {
     $date = ctime();
 
-    print "        ========== START $dictionary($lang) $date ==========\n";
+    print "        ========== START $dictionary $date ==========\n";
 
     chdir $dictionary;
-    dict_clean();
+    dict_distclean();
 
     if (defined $dictionaries{$dictionary}) {
 	foreach my $env (keys $dictionaries{$dictionary}) {
 	    foreach $lang (@{$dictionaries{$dictionary}{$env}}) {
+		dict_clean();
 		$ENV{$env} = $lang;
 		$error = dict_build();
 	    }

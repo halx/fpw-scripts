@@ -137,7 +137,7 @@ if (not chdir($top_dir) ) {
     exit 1;
 }
 
-my ($date, $lang, $error);
+my ($date, $error);
 
 foreach my $dictionary (keys %dictionaries) {
     if (not chdir($dictionary) ) {
@@ -150,8 +150,8 @@ foreach my $dictionary (keys %dictionaries) {
 
     if (defined $dictionaries{$dictionary}) {
 	foreach my $env (keys $dictionaries{$dictionary}) {
-	    foreach $lang (@{$dictionaries{$dictionary}{$env}}) {
-		print "        ========== START $dictionary $date ==========\n";
+	    foreach my $lang (@{$dictionaries{$dictionary}{$env}}) {
+		print "        ========== START $dictionary($lang) $date ==========\n";
 		
 		dict_clean();
 		

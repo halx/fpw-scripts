@@ -117,6 +117,7 @@ sub change_dir {
     if (not (-d $dir and -x $dir) ) {
 	return 0;
     } else {
+	chdir $dir;
 	return 1;
     }
 }

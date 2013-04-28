@@ -32,25 +32,31 @@ use lib "$HOME/usr/lib/perl5";
 use lib "$HOME/usr/lib/perl5/site_perl";
 
 
-my @dictionaries = (
-  'JMnedict',
-  'JMdict',
-  'jp_examples',
-  'kanjidic'
-);
 
-my @JMdict_lang = (
-  'eng',
-  'dut',
-# 'fre',
-# 'rus'
-);
+my %dictionaries = (
+    'JMdict' => {
+	'DICT_LANG' => [
+	    'eng',
+	    'dut',
+	    # 'fra',
+	    # 'rus'
+	    ]
+    },
 
-my @kanjidic_lang = (
-  'en',
-# 'es',
-# 'fr',
-# 'pt'
+    'kanjidic' => {
+	'DICT_LANG' => [
+	    'en',
+	    # 'es',
+	    # 'fr',
+	    # 'pt'
+	    ]
+    },
+    
+    'jp_examples' => {
+	'SHORT' => [0, 1]
+    },
+
+    'JMnedict' => undef
 );
 
 my $prefix = "$HOME/usr";
@@ -88,18 +94,19 @@ sub prepend_path {
 }
 
 
-sub buildall {
+sub build_dict {
   my $error = 0;
 
-  print "...cleaning distribution...\n";
-  $error = system("$fpwmake distclean");
+  print "... cleaning distribution ...\n";
 
-  print "...creating distribution...\n";
-  $error = system("$fpwmake create-distrib");
-  return $error if $error;
+  print "... creating distribution ...\n";
+  if ($error = system("$fpwmake create-distrib")) {
+      return $error;
+  }
 
-  print "...cleaning distribution...\n";
-  $error = system("$fpwmake distclean");
+  print "... cleaning distribution ...\n";
+
+  return 0;
 }
 
 
@@ -109,24 +116,35 @@ sub buildall {
 my $top_dir = dirname(abs_path($0));
 chdir $top_dir;
 
-my ($date);
+my ($date, $error);
 
-foreach my $dictionary (@dictionaries) {
-  $date = ctime();
+foreach my $dictionary (keys %dictionaries) {
+    $date = ctime();
 
-  print "          ========== START $dictionary $date ==========\n";
+    print "          ========== START $dictionary $date ==========\n";
 
-  chdir $dictionary;
+    chdir $dictionary;
 
-  try {
-    require 'convert.pl';
+    if (defined $dictionaries{$dictionary}) {
+	foreach my $env (keys $dictionaries{$dictionary}) {
+	    foreach my $lang (@{$dictionaries{$dictionary}{$env}}) {
+		$ENV{$env} = $lang;
+		$error = build_dict();
+	    }
+
+	    print "\n";
+	}
+    } else {
+	$error = build_dict();
+    }
 
     $date = ctime();
-    print "          ========== END   $dictionary $date ==========\n\n";
-  } catch {
-    $date = ctime();
-    print "          !!!!!!!!!! ERROR $dictionary $date !!!!!!!!!!\n\n";
-  };
+    
+    if (not $error) {
+	print "          ========== END   $dictionary $date ==========\n\n";
+    } else {
+	print "          !!!!!!!!!! ERROR $dictionary $date !!!!!!!!!!\n\n";
+    }
 
-  chdir $top_dir;
+    chdir $top_dir;
 }

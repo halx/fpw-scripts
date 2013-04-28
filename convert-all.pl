@@ -94,19 +94,14 @@ sub prepend_path {
 }
 
 
-sub build_dict {
-  my $error = 0;
+sub dict_clean {
+    print "... cleaning distribution ...\n";
+    return system("$fpwmake distclean");
+}
 
-  print "... cleaning distribution ...\n";
-
-  print "... creating distribution ...\n";
-  if ($error = system("$fpwmake create-distrib")) {
-      return $error;
-  }
-
-  print "... cleaning distribution ...\n";
-
-  return 0;
+sub dict_build {
+    print "... creating distribution ...\n";
+    return system("$fpwmake create-distrib");
 }
 
 
@@ -116,34 +111,35 @@ sub build_dict {
 my $top_dir = dirname(abs_path($0));
 chdir $top_dir;
 
-my ($date, $error);
+my ($date, $lang, $error);
 
 foreach my $dictionary (keys %dictionaries) {
     $date = ctime();
 
-    print "          ========== START $dictionary $date ==========\n";
+    print "        ========== START $dictionary($lang) $date ==========\n";
 
     chdir $dictionary;
+    dict_clean();
 
     if (defined $dictionaries{$dictionary}) {
 	foreach my $env (keys $dictionaries{$dictionary}) {
-	    foreach my $lang (@{$dictionaries{$dictionary}{$env}}) {
+	    foreach $lang (@{$dictionaries{$dictionary}{$env}}) {
 		$ENV{$env} = $lang;
-		$error = build_dict();
+		$error = dict_build();
 	    }
 
 	    print "\n";
 	}
     } else {
-	$error = build_dict();
+	$error = dict_build();
     }
 
     $date = ctime();
     
     if (not $error) {
-	print "          ========== END   $dictionary $date ==========\n\n";
+	print "        ========== END   $dictionary($lang) $date ==========\n\n";
     } else {
-	print "          !!!!!!!!!! ERROR $dictionary $date !!!!!!!!!!\n\n";
+	print "        !!!!!!!!!! ERROR $dictionary($lang) $date !!!!!!!!!!\n\n";
     }
 
     chdir $top_dir;

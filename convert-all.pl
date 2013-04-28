@@ -24,9 +24,8 @@ use strict;
 
 use Env qw(HOME PATH);
 use Cwd qw(abs_path getcwd);
-use File::Basename;
-use Time::localtime;
-use Try::Tiny;
+use File::Basename qw(dirname);
+use Time::localtime qw(ctime);
 
 use lib "$HOME/usr/lib/perl5";
 use lib "$HOME/usr/lib/perl5/site_perl";
@@ -82,6 +81,7 @@ sub prepend_path {
   my $path = shift;
   my $add = shift;
 
+
   if ($path eq "") {
     $path = $add;
   } else {
@@ -110,43 +110,77 @@ sub dict_build {
 }
 
 
+sub change_dir {
+    my $dir = shift;
+
+
+    if (not (-d $dir and -x $dir) ) {
+	return 0;
+    } else {
+	return 1;
+    }
+}
+
+
+sub final_message {
+    my $dictionary = shift;
+    my $error = shift;
+    my $lang = shift;
+
+    my $date = ctime();
+
+
+    $lang = '(' . $lang . ')';
+
+    if (not $error){
+	print "        ========== END   $dictionary$lang $date ==========\n\n";
+    } else {
+	print "        !!!!!!!!!! ERROR $dictionary$lang $date !!!!!!!!!!\n\n";
+    }
+}
+
 
 ### main
 
 my $top_dir = dirname(abs_path($0));
-chdir $top_dir;
+
+if (not change_dir($top_dir) ) {
+    print "!!! Error: can't cd to $top_dir\n";
+    exit 1;
+}
 
 my ($date, $lang, $error);
 
 foreach my $dictionary (keys %dictionaries) {
+    if (not change_dir($dictionary) ) {
+	print "!!! Error: can't cd to $dictionary\n";
+	next;
+    }
+
     $date = ctime();
-
-    print "        ========== START $dictionary $date ==========\n";
-
-    chdir $dictionary;
     dict_distclean();
 
     if (defined $dictionaries{$dictionary}) {
 	foreach my $env (keys $dictionaries{$dictionary}) {
 	    foreach $lang (@{$dictionaries{$dictionary}{$env}}) {
+		print "        ========== START $dictionary $date ==========\n";
+		
 		dict_clean();
+		
 		$ENV{$env} = $lang;
 		$error = dict_build();
-	    }
 
-	    print "\n";
+		final_message($dictionary, $error, $lang);
+	    }
 	}
     } else {
+	print "        ========== START $dictionary $date ==========\n";
+	
 	$error = dict_build();
+
+	final_message($dictionary, $error, '');
     }
 
-    $date = ctime();
-    
-    if (not $error) {
-	print "        ========== END   $dictionary($lang) $date ==========\n\n";
-    } else {
-	print "        !!!!!!!!!! ERROR $dictionary($lang) $date !!!!!!!!!!\n\n";
-    }
-
+    dict_distclean();
     chdir $top_dir;
 }

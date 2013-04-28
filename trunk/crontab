@@ -1,4 +1,6 @@
 # cron job for the FreePWING conversions
 #
+PERL5LIB = /home/fpw/usr/lib/perl5/site_perl:/home/fpw/usr/lib/perl5
 # m h dom mon dow  command
-03 18   *   *   5  $HOME/fpw-scripts/convert-all.sh > $HOME/fpw-convert.log 2>&1
+#03 18   *   *   5  $HOME/fpw-scripts/convert-all.sh > $HOME/fpw-convert.log 2>&1
+07 16   *   *   5  $HOME/perl5/perlbrew/perls/perl-5.16.3/bin/perl $HOME/fpw-scripts/convert-all.pl > $HOME/fpw-convert2.log 2>&1

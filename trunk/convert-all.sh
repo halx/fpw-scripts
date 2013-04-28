@@ -93,6 +93,7 @@ export dict_home=$HOME/dicts
 # make sure these environment variables are set correctly
 export FPWING_SHARE=$prefix/share/freepwing
 export LANG=C
+export LD_LIBRARY_PATH=$HOME/usr/lib
 
 prepend_path PATH $HOME/usr/bin
 prepend_path PERL5LIB $HOME/usr/lib/perl5/site_perl:$HOME/usr/lib/perl5

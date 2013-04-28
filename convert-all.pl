@@ -25,6 +25,7 @@ use strict;
 use Env qw(HOME PATH);
 use Cwd qw(abs_path getcwd);
 use Time::localtime;
+use Try::Tiny;
 
 use lib "$HOME/usr/lib/perl5";
 use lib "$HOME/usr/lib/perl5/site_perl";
@@ -94,7 +95,7 @@ sub buildall {
 
   print "...creating distribution...\n";
   $error = system("$fpwmake create-distrib");
-  exit $error if $error;
+  return $error if $error;
 
   print "...cleaning distribution...\n";
   $error = system("$fpwmake distclean");
@@ -115,8 +116,16 @@ foreach my $dictionary (@dictionaries) {
   print "          ========== START $dictionary $date ==========\n";
 
   chdir $dictionary;
-  require 'convert.pl';
-  chdir $top_dir;
 
-  $date = ctime();
+  try {
+    require 'convert.pl';
+
+    $date = ctime();
+    print "          ========== END   $dictionary $date ==========\n\n";
+  } catch {
+    $date = ctime();
+    print "          !!!!!!!!!! ERROR $dictionary $date !!!!!!!!!!\n\n";
+  };
+
+  chdir $top_dir;
 }

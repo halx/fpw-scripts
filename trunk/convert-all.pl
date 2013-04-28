@@ -67,6 +67,9 @@ $ENV{'PATH'} = prepend_path($ENV{'PATH'}, "$HOME/usr/bin");
 $ENV{'LD_LIBRARY_PATH'} =
   prepend_path($ENV{'LD_LIBRARY_PATH'}, "$HOME/usr/lib");
 
+
+### helper functions
+
 sub prepend_path {
   my $path = shift;
   my $add = shift;
@@ -82,21 +85,27 @@ sub prepend_path {
   return $path;
 }
 
+
 sub buildall {
-  print "    (cleaning distribution)\n";
-  `$fpwmake distclean`;
+  my $error = 0;
 
-  print "    (creating distribution)\n";
-  `$fpwmake create-distrib`;
-  # error handling
+  print "...cleaning distribution...\n";
+  $error = system("$fpwmake distclean");
 
-  print "    (cleaning distribution)\n";
-  `$fpwmake distclean`;
+  print "...creating distribution...\n";
+  $error = system("$fpwmake create-distrib");
+  exit $error if $error;
+
+  print "...cleaning distribution...\n";
+  $error = system("$fpwmake distclean");
 }
 
+
+
 ### main
-my top_dir = abs_path($0);
-chdir $top_dir
+
+my $top_dir = abs_path($0);
+chdir $top_dir;
 
 my ($date);
 
@@ -108,8 +117,6 @@ foreach my $dictionary (@dictionaries) {
   chdir $dictionary;
   require 'convert.pl';
   chdir $top_dir;
-  # run script
-  # error handling
 
   $date = ctime();
 }

@@ -110,19 +110,6 @@ sub dict_build {
 }
 
 
-sub change_dir {
-    my $dir = shift;
-
-
-    if (not (-d $dir and -x $dir) ) {
-	return 0;
-    } else {
-	chdir $dir;
-	return 1;
-    }
-}
-
-
 sub final_message {
     my $dictionary = shift;
     my $error = shift;
@@ -145,7 +132,7 @@ sub final_message {
 
 my $top_dir = dirname(abs_path($0));
 
-if (not change_dir($top_dir) ) {
+if (not chdir($top_dir) ) {
     print "!!! Error: can't cd to $top_dir\n";
     exit 1;
 }
@@ -153,7 +140,7 @@ if (not change_dir($top_dir) ) {
 my ($date, $lang, $error);
 
 foreach my $dictionary (keys %dictionaries) {
-    if (not change_dir($dictionary) ) {
+    if (not chdir($dictionary) ) {
 	print "!!! Error: can't cd to $dictionary\n";
 	next;
     }

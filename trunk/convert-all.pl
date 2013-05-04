@@ -120,9 +120,9 @@ sub make_dict {
       $error = dict_build();
 
       banner('END  ', $name, $variant, $error);
-    }
 
-    dict_distclean();
+      dict_distclean();
+    }
   }
 }
 

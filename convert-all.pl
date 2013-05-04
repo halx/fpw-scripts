@@ -132,6 +132,8 @@ sub banner {
   my $variant = shift;
   my $error = shift;
 
+  my $bracket;
+
 
   unless ($error) {
     $bracket = '==========';

@@ -90,8 +90,8 @@ distrib-ebzip:
 
 copy-all: distrib distrib-ebzip
 	if [ -d "${dict_home}" ]; then \
-	  mv ${DISTRIB} "${dict_home}"; \
-	  mv ${DISTRIB_EBZIP} "${dict_home}"; \
+	  cp -r ${DISTRIB} "${dict_home}"; \
+	  cp -r ${DISTRIB_EBZIP} "${dict_home}"; \
 	fi
 
 create-distrib: distrib distrib-ebzip

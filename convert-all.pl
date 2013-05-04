@@ -39,7 +39,7 @@ my @dictionaries = (
     )
   ),
   make_dict(
-    'JMndict',
+    'JMnedict',
     undef    
   ),
   make_dict(
@@ -69,9 +69,9 @@ $ENV{'dict_home'} = "$HOME/dicts";
 $ENV{'FPWING_SHARE'} = "$prefix/share/freepwing";
 $ENV{'LANG'} = 'C';
 
-$ENV{'PATH'} = prepend_path($ENV{'PATH'}, "$HOME/usr/bin");
+$ENV{'PATH'} = prepend_path($ENV{'PATH'}, "$prefix/bin");
 $ENV{'LD_LIBRARY_PATH'} =
-  prepend_path($ENV{'LD_LIBRARY_PATH'}, "$HOME/usr/lib");
+  prepend_path($ENV{'LD_LIBRARY_PATH'}, "$prefix/lib");
 
 
 ### main

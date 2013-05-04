@@ -80,17 +80,71 @@ my $top_dir = dirname(abs_path($0));
 
 foreach my $dictionary (@dictionaries) {
   if (not chdir($top_dir) ) {
-    print "!!! Error: can't cd to $dictionary\n";
-    next;
+    die "!!! Error: can't cd to $dictionary\n";
   }
 
   $dictionary->();
-
-  chdir $top_dir;
 }
+
+chdir $top_dir;
+
+exit 0;
+
+### end of main
 
 
 ### helper functions
+
+sub make_dict {
+  my $name = shift;
+  my @variants = @_;
+
+  return sub {
+    my $error;
+
+    if (not chdir($name) ) {
+      print "!!! Error: can't cd to $name\n";
+      next;
+    }
+	
+    dict_distclean();
+
+    foreach my $variant (@variants) {
+      dict_clean();
+
+      # hard-coded environment variable name for Makefiles!
+      $ENV{'VARIANT'} = $variant;
+
+      banner('START', $name, $variant, 0);
+
+      $error = dict_build();
+
+      banner('END  ', $name, $variant, $error);
+    }
+
+    dict_distclean();
+  }
+}
+
+sub banner {
+  my $where = shift;
+  my $name = shift;
+  my $variant = shift;
+  my $error = shift;
+
+
+  unless ($error) {
+    $bracket = '==========';
+  } else {
+    $bracket = '!!!!!!!!!!';
+    $where = 'ERROR';
+  }
+
+  print "        $bracket $where $name";
+  print "($variant)" if $variant;
+  print " " . ctime() . " $bracket\n";
+}
+
 
 sub prepend_path {
   my $path = shift;
@@ -106,49 +160,6 @@ sub prepend_path {
   }
 
   return $path;
-}
-
-
-sub make_dict {
-  my $name = shift;
-  my @variants = @_;
-
-  return sub {
-    my $error;
-
-    if (not chdir($name) ) {
-      print "!!! Error: can't cd to $name\n";
-      next;
-    }
-	
-    my $date = ctime();
-
-    dict_distclean();
-
-    foreach my $variant (@variants) {
-      dict_clean();
-
-      # hard-coded environment variable for Makefiles!
-      $ENV{'VARIANT'} = $variant;
-
-      print "        ========== START $name";
-      print "($variant)" if $variant;
-      print " $date ==========\n";
-
-      $error = dict_build();
-
-      unless ($error) {
-	print "        ========== END   $name";
-	print "($variant)" if $variant;
-	print " $date ==========\n";
-      } else {
-	print "        !!!!!!!!!! ERROR $name";
-	print "($variant)" if $variant;
-	print " $date !!!!!!!!!!\n";	    }
-    }
-
-    dict_distclean();
-  }
 }
 
 

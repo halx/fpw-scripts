@@ -1,3 +1,8 @@
+2013-05-03 Hannes Loeffler <Hannes.Loeffler@gmail.com>
+
+  * edict-fpw2.7.0
+  * push warnings on stack and output after processing
+
 2011-01-05 Hannes Loeffler <hal@hloeffler.info>
 
   * edict-fpw2.6.1

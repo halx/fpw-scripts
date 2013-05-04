@@ -1,4 +1,4 @@
-# Copyright (C) 2004-2010 Hannes Loeffler
+# Copyright (C) 2004-2013 Hannes Loeffler
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -13,13 +13,13 @@
 
 
 
-### parameters that may need to be adapted: DICT_LANG, ROMAJI, INSTALLDIR
+### parameters that may need to be adapted: VARIANT, ROMAJI, INSTALLDIR
 
 # "eng" (english), "fre" (french), "ger" (german), "rus" (russian),
 # "dut" (dutch), and "nor" (norwegian) supported (some may have only a few
 # entries)
-ifndef DICT_LANG
-DICT_LANG = eng
+ifndef VARIANT
+VARIANT = eng
 endif
 
 # romaji search keys if > 0
@@ -38,9 +38,9 @@ DEBUG = 0			# give more feedback
 
 
 # version information
-SCRIPT_VERSION = 2.6.1
+SCRIPT_VERSION = 2.7.0
 # we need to get the following automatically somehow...
-JMDICT_VERSION = "JMdict(${DICT_LANG}) ${TODAY} (DTD v1.07), conversion script v${SCRIPT_VERSION}"
+JMDICT_VERSION = "JMdict(${VARIANT}) ${TODAY} (DTD v1.07), conversion script v${SCRIPT_VERSION}"
 
 NAME = JMdict
 PACKAGE = ${NAME}-fpw${SCRIPT_VERSION}
@@ -57,23 +57,23 @@ CATALOGS_TXT_FILE = catalogs.txt
 
 # installation file names and directories:
 
-ifneq (${DICT_LANG},rus)
-ifeq (${DICT_LANG},eng)
+ifneq (${VARIANT},rus)
+ifeq (${VARIANT},eng)
     LNG = en
 endif
-ifeq (${DICT_LANG},fre)
+ifeq (${VARIANT},fre)
     LNG = fr
 endif
-ifeq (${DICT_LANG},ger)
+ifeq (${VARIANT},ger)
     LNG = de
 endif
-ifeq (${DICT_LANG},nor)
+ifeq (${VARIANT},nor)
     LNG = no
 endif
-ifeq (${DICT_LANG},dut)
+ifeq (${VARIANT},dut)
     LNG = nl
 endif
-  DIR = ${NAME}_${DICT_LANG}_${TODAY}
+  DIR = ${NAME}_${VARIANT}_${TODAY}
   COPYRIGHT_FILE = ${INPUTS_DIR}/License
   DISTRIB = edict_${LNG}.fpw.tar.gz
   DISTRIB_EBZIP = edict_${LNG}.fpwebz.tar
@@ -103,7 +103,7 @@ ARCHIVEEXTRA = AUTHORS COPYING ChangeLog catalogs.txt.tmpl ${INFO_FILE} ${README
 CLEANEXTRA = gai16h err ${README_FILE} ${CATALOGS_TXT_FILE}
 DISTCLEANEXTRA = ${SOURCES}
 
-FPWPARSERFLAGS = --language=${DICT_LANG} --romaji-key=${ROMAJI}\
+FPWPARSERFLAGS = --language=${VARIANT} --romaji-key=${ROMAJI}\
 		 --data-file=${SOURCES} --info-file=${INFO_FILE} \
 		 --readme-file=${README_FILE} --copyright-file=${COPYRIGHT_FILE} \
 		 --gaiji-file=${GAIJI_FILE} --version-string=${JMDICT_VERSION} \

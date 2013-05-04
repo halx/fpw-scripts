@@ -23,39 +23,38 @@
 use strict;
 
 use Env qw(HOME PATH);
-use Cwd qw(abs_path getcwd);
+use Cwd qw(abs_path);
 use File::Basename qw(dirname);
 use Time::localtime qw(ctime);
 
-use lib "$HOME/usr/lib/perl5";
-use lib "$HOME/usr/lib/perl5/site_perl";
 
-
-
-my %dictionaries = (
-    'JMdict' => {
-	'DICT_LANG' => [
-	    'eng',
-	    'dut',
-	    # 'fra',
-	    # 'rus'
-	    ]
-    },
-
-    'kanjidic' => {
-	'DICT_LANG' => [
-	    'en',
-	    # 'es',
-	    # 'fr',
-	    # 'pt'
-	    ]
-    },
-    
-    'jp_examples' => {
-	'SHORT' => [0, 1]
-    },
-
-    'JMnedict' => undef
+my @dictionaries = (
+  make_dict(
+    'JMdict',
+    (
+     'eng',
+     'dut',
+     #'fra',
+     #'rus'
+    )
+  ),
+  make_dict(
+    'JMndict',
+    undef    
+  ),
+  make_dict(
+    'kanjidic',
+    (
+     'en',
+     #'es',
+     #'fr',
+     #'pt'
+    )
+  ),
+  make_dict(
+    'jp_examples',
+    ('long', 'short')
+  )
 );
 
 my $prefix = "$HOME/usr";
@@ -73,6 +72,22 @@ $ENV{'LANG'} = 'C';
 $ENV{'PATH'} = prepend_path($ENV{'PATH'}, "$HOME/usr/bin");
 $ENV{'LD_LIBRARY_PATH'} =
   prepend_path($ENV{'LD_LIBRARY_PATH'}, "$HOME/usr/lib");
+
+
+### main
+
+my $top_dir = dirname(abs_path($0));
+
+foreach my $dictionary (@dictionaries) {
+  if (not chdir($top_dir) ) {
+    print "!!! Error: can't cd to $dictionary\n";
+    next;
+  }
+
+  $dictionary->();
+
+  chdir $top_dir;
+}
 
 
 ### helper functions
@@ -94,6 +109,49 @@ sub prepend_path {
 }
 
 
+sub make_dict {
+  my $name = shift;
+  my @variants = @_;
+
+  return sub {
+    my $error;
+
+    if (not chdir($name) ) {
+      print "!!! Error: can't cd to $name\n";
+      next;
+    }
+	
+    my $date = ctime();
+
+    dict_distclean();
+
+    foreach my $variant (@variants) {
+      dict_clean();
+
+      # hard-coded environment variable for Makefiles!
+      $ENV{'VARIANT'} = $variant;
+
+      print "        ========== START $name";
+      print "($variant)" if $variant;
+      print " $date ==========\n";
+
+      $error = dict_build();
+
+      unless ($error) {
+	print "        ========== END   $name";
+	print "($variant)" if $variant;
+	print " $date ==========\n";
+      } else {
+	print "        !!!!!!!!!! ERROR $name";
+	print "($variant)" if $variant;
+	print " $date !!!!!!!!!!\n";	    }
+    }
+
+    dict_distclean();
+  }
+}
+
+
 sub dict_clean {
     print "... fpwmake clean ...\n";
     return system("$fpwmake clean");
@@ -107,68 +165,4 @@ sub dict_distclean {
 sub dict_build {
     print "... fpwmake create-distrib ...\n";
     return system("$fpwmake create-distrib");
-}
-
-
-sub final_message {
-    my $dictionary = shift;
-    my $error = shift;
-    my $lang = shift;
-
-    my $date = ctime();
-
-
-    $lang = '(' . $lang . ')';
-
-    if (not $error){
-	print "        ========== END   $dictionary$lang $date ==========\n\n";
-    } else {
-	print "        !!!!!!!!!! ERROR $dictionary$lang $date !!!!!!!!!!\n\n";
-    }
-}
-
-
-### main
-
-my $top_dir = dirname(abs_path($0));
-
-if (not chdir($top_dir) ) {
-    print "!!! Error: can't cd to $top_dir\n";
-    exit 1;
-}
-
-my ($date, $error);
-
-foreach my $dictionary (keys %dictionaries) {
-    if (not chdir($dictionary) ) {
-	print "!!! Error: can't cd to $dictionary\n";
-	next;
-    }
-
-    $date = ctime();
-    dict_distclean();
-
-    if (defined $dictionaries{$dictionary}) {
-	foreach my $env (keys $dictionaries{$dictionary}) {
-	    foreach my $lang (@{$dictionaries{$dictionary}{$env}}) {
-		print "        ========== START $dictionary($lang) $date ==========\n";
-		
-		dict_clean();
-		
-		$ENV{$env} = $lang;
-		$error = dict_build();
-
-		final_message($dictionary, $error, $lang);
-	    }
-	}
-    } else {
-	print "        ========== START $dictionary $date ==========\n";
-	
-	$error = dict_build();
-
-	final_message($dictionary, $error, '');
-    }
-
-    dict_distclean();
-    chdir $top_dir;
 }

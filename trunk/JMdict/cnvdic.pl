@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 #
-# Copyright (C) 2004-2011 Hannes Loeffler
+# Copyright (C) 2004-2013 Hannes Loeffler
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -30,16 +30,17 @@ use Unicode::MapUTF8 qw(from_utf8);
 use XML::Twig;
 use Text::Kakasi;
 
-use subs qw(process_entry, register, write_menu, write_copy, euc_chars, warn_msg);
+use subs qw(process_entry, register, write_menu, write_copy, euc_chars,
+warn_msg);
 
 
 my ($lang, $romaji, $datafile, $inffile, $rdmfile, $cprfile, $gaijifile);
 my ($dict_version, $debug);
-my ($printfrq, $kakasi, $ign, $jpto, $tojp, $ent_seq);
+my ($printfrq, $kakasi, $ign, $jpto, $tojp, $ent_seq, $wlen, $clen);
 my ($leftb, $rightb, $middot, $right_arrow) =
   ("\xA1\xDA", "\xA1\xDB", "\xA1\xA6", "\xA2\xAA");  # some handy characters
 
-
+my @warnings = ();
 my @pri_list = ('ichi1', 'jdd1', 'gai1', 'spec1', 'news1');
 
 my %lang_list = ('eng' => 'English',
@@ -96,13 +97,30 @@ print "*** starting Japanese/$lang_list{$lang} conversion...\n";
 open DATA, '<:gzip', "$datafile" or
   die "$0: failed to open the file, $!: $datafile\n";
 
-my $entry = new XML::Twig(twig_handlers => {'entry' => \&process_entry}, NoExpand => 1);
+my $entry = new XML::Twig(twig_handlers => {'entry' => \&process_entry},
+			  NoExpand => 1);
 $entry->parse(\*DATA);
 $entry->purge;
 
 close (DATA);
 
-print "*** $jpto entries processed\n";
+print "*** The following entries were ignored due to JISX0208 characters\n";
+
+$wlen = 0;
+
+foreach my $w (@warnings) {
+    $clen = length($w);
+    $wlen += $clen + 1;
+
+    if ($wlen > 79) {
+	print "\n";
+	$wlen = $clen;
+    }
+
+    print " $w";
+}
+
+print "\n*** $jpto entries processed\n";
 print "*** $ign entries ignored\n";
 
 # index by translation
@@ -403,7 +421,8 @@ sub process_entry {
   $check_entry = "$item$kanji$kana$contents";
 
   if ($check_entry =~ /\x8F[\xA1-\xFE][\xA1-\xFE]/) {
-    warn_msg("non JIS X 0208 character found!", 1);
+    push @warnings, $ent_seq;
+    $ign++;
     return;
   }
 

@@ -14,10 +14,10 @@
 
 
 
-### parameters that may need to be adapted: SHORT, PRUNE, INSTALLDIR
+### parameters that may need to be adapted: VARIANT, PRUNE, INSTALLDIR
 
 # short or long version
-#SHORT = 1
+#VARIANT = long
 
 # prune data, i.e. remove obvious duplicates
 PRUNE = 1
@@ -37,7 +37,7 @@ PACKAGE = ${NAME}-fpw${SCRIPT_VERSION}
 # input data
 INPUTS_DIR = data
 
-ifeq (${SHORT},1)
+ifeq (${VARIANT},short)
   EXT = _s
 else
   EXT =

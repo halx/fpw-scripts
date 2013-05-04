@@ -17,8 +17,8 @@
 ### user definable variables
 
 # "en", "de", "es", "fr", or "pt"
-ifndef DICT_LANG
-  DICT_LANG = en
+ifndef VARIANT
+  VARIANT = en
 endif
 
 # use gaiji for umlauts and accents, otherwise use ASCII equivalents
@@ -61,35 +61,35 @@ CRADK_FILE = ${INPUTS_DIR}/classical_radicals
 GAIJI_FILE = gaiji/gaiji_table
 CATALOGS_TXT_FILE = catalogs.txt
 
-ifeq (${DICT_LANG},en)
+ifeq (${VARIANT},en)
   KANJIDIC = ${NAME}.gz
   TITLE = "\xb4\xc1\xb1\xd1\xbb\xfa\xc5\xb5"
   HANGAIJI = ""
 else
-  KANJIDIC = ${NAME}_${DICT_LANG}.gz
+  KANJIDIC = ${NAME}_${VARIANT}.gz
   HANGAIJI = "HanGaiji   = \"gai16h\""
 endif
 
-ifeq (${DICT_LANG},de)
+ifeq (${VARIANT},de)
   TITLE = "\xb4\xc1\xc6\xc8\xbb\xfa\xc5\xb5"
 endif
 
-ifeq (${DICT_LANG},es)
+ifeq (${VARIANT},es)
   TITLE = "\xb4\xc1\xc0\xbe\xbb\xfa\xc5\xb5"
 endif
 
-ifeq (${DICT_LANG},fr)
+ifeq (${VARIANT},fr)
   TITLE = "\xb4\xc1\xca\xa9\xbb\xfa\xc5\xb5"
 endif
 
-ifeq (${DICT_LANG},pt)
+ifeq (${VARIANT},pt)
   TITLE = "\xb4\xc1\xc9\xf2\xbb\xfa\xc5\xb5"
 endif
 
 SOURCES = ${INPUTS_DIR}/${KANJIDIC}
 
 # installation file names and directories:
-DIR = ${NAME}_${DICT_LANG}_${TODAY}
+DIR = ${NAME}_${VARIANT}_${TODAY}
 DIR2 = ${NAME}
 INSTALLDIR2 = ${INSTALLDIR}/${DIR}
 DATA_DIR = DATA
@@ -100,12 +100,12 @@ GAIJI_UC = 1
 CATALOGS = CATALOGS
 HONMON = HONMON
 
-DISTRIB = ${NAME}_${DICT_LANG}.fpw.tar.gz
-DISTRIB_EBZIP = ${NAME}_${DICT_LANG}.fpwebz.tar
+DISTRIB = ${NAME}_${VARIANT}.fpw.tar.gz
+DISTRIB_EBZIP = ${NAME}_${VARIANT}.fpwebz.tar
 
 #
 ifeq (${GAIJI},1)
-  ifneq (${DICT_LANG},en)
+  ifneq (${VARIANT},en)
     HALFCHARS = gaiji/halfchar.txt
   endif
 endif
@@ -122,7 +122,7 @@ ARCHIVEEXTRA = ${INFO_FILE} ${README_FILE} ${COPYRIGHT_FILE} AUTHORS COPYING Cha
 CLEANEXTRA = gai16h gai16f log ${CATALOGS_TXT_FILE} ${README_FILE}
 DISTCLEANEXTRA = ${SOURCES}
 
-FPWPARSERFLAGS =  --language=${DICT_LANG} --gaiji=${GAIJI} \
+FPWPARSERFLAGS =  --language=${VARIANT} --gaiji=${GAIJI} \
 		  --data-file=${SOURCES} --info-file=${INFO_FILE} \
 		  --readme-file=${README_FILE} --copyright-file=${COPYRIGHT_FILE} \
 		  --gaiji-file=${GAIJI_FILE} --radical-file=${RADK_FILE} \

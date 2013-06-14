@@ -104,7 +104,7 @@ $entry->purge;
 
 close (DATA);
 
-print "*** The following entries were ignored due to JISX0208 characters\n";
+print "*** The following entries were ignored due to non-JISX0208 characters\n";
 
 $wlen = 0;
 

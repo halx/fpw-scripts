@@ -45,7 +45,7 @@ use vars qw(@ISA
 	    $tp
 	    $hp);
 
-$VERSION = 0.3.1;
+$VERSION = 0.5.0;
 @ISA = qw(Exporter);
 @EXPORT_OK = qw(FreePWING_encode FreePWING_write);
 

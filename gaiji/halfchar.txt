@@ -46,7 +46,7 @@ plusminus	gaiji/halfchar/plusminus-16h.xbm
 quminv		gaiji/halfchar/quminv-16h.xbm
 section		gaiji/halfchar/section-16h.xbm
 sharps		gaiji/halfchar/sharps-16h.xbm
-squared		gaiji/halfchar/squared-16h.xbm
+sup2		gaiji/halfchar/sup2-16h.xbm
 uacute		gaiji/halfchar/iacute-16h.xbm
 ucircum		gaiji/halfchar/ucircum-16h.xbm
 ugrave		gaiji/halfchar/ugrave-16h.xbm
@@ -55,3 +55,5 @@ Uuml		gaiji/halfchar/Uuml-16h.xbm
 Yen		gaiji/halfchar/Yen-16h.xbm
 times		gaiji/halfchar/times-16h.xbm
 reg		gaiji/halfchar/reg-16h.xbm
+frac14		gaiji/halfchar/frac14-16h.xbm
+sup3		gaiji/halfchar/sup3-16h.xbm

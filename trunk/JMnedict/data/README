@@ -1,4 +1,4 @@
-This is a conversion of Jim Breen's ENAMDICT[1] to JIS X 4081 format (an EPWING subset[2]) by Hannes Loeffler <hal@hloeffler.info>.  The code of the conversion script is based on work by Kazuhiko Shiozaki[3] using the FreePWING library[4].
+This is a conversion of Jim Breen's ENAMDICT[1] to JIS X 4081 format (an EPWING subset[2]) by Hannes Loeffler <hannes.loeffler@gmail.com>.  The code of the conversion script is based on work by Kazuhiko Shiozaki[3] using the FreePWING library[4].
 
 
 The dictionary can be searched in the following ways.

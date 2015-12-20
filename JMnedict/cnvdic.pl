@@ -192,6 +192,8 @@ sub process_entry {
     $romaji = $trans_det[$i];
     $romaji =~ s!\s*\(.*?\)\s*!!g;
     $romaji =~ s!(.*?),!\1!;
+    $romaji =~
+      s!([\x80-\xFF])!<gaiji type=\"half\" name=\"$gaiji_table{$1}\">!g;
     $romaji = to_ascii($romaji);
 
     if (length($romaji) > 2 and length($romaji) < 50 and

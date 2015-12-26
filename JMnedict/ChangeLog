@@ -1,3 +1,8 @@
+2015-12-20 Hannes Loeffler <hannes.loeffler@gmail.com>
+
+  * JMnedict-fpw1.4.1
+  * convert trans_det entry from UTF8 to Latin1
+
 2010-12-19 Hannes Loeffler <hal@hloeffler.info>
 
   * JMnedict-fpw1.4.0

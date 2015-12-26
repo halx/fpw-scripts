@@ -24,6 +24,7 @@ use PerlIO::gzip;
 use Getopt::Long;		# actually already used by FreePWING
 use FreePWING::FPWUtils::MarkupInterface qw(FreePWING_encode FreePWING_write);
 use Jcode;
+use Unicode::MapUTF8 qw(from_utf8);
 use XML::Twig;
 use Lingua::DE::ASCII qw(to_ascii);
 
@@ -108,7 +109,7 @@ sub process_entry {
   my ($twig, $entry) = @_;
 
   my ($keb, $reb);		# tags
-  my $key;
+  my ($key, $text);
   my (@name_type, @trans_det);
 
 
@@ -143,7 +144,9 @@ sub process_entry {
     }
 
     foreach my $d ($t->descendants('trans_det') ) {
-      push @trans_det, $d->first_child->trimmed_text();
+      $text = $d->first_child->trimmed_text();
+      $text = from_utf8(-string => $text, -charset => 'latin1');
+      push @trans_det, $text;
     }
   }
   # </trans>

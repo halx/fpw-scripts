@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 #
-# Copyright (C) 2004-2007 Hannes Loeffler
+# Copyright (C) 2004-2007,2022 Hannes Loeffler
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -108,10 +108,19 @@ exit 0;
 sub process_entry {
   my ($twig, $entry) = @_;
 
-  my ($keb, $reb);		# tags
+  my ($keb, $reb, $ent_seq);		# tags
   my ($key, $text);
   my (@name_type, @trans_det);
 
+
+  # added for debugging
+  $ent_seq = 0;
+
+  if ($debug) {
+    if (defined ($ent_seq = ($entry->descendants('ent_seq'))[0] ) ) {
+      $ent_seq = $ent_seq->first_child->trimmed_text();
+    }
+  }
 
   # <k_ele>: kanji element
   # <keb>: processed directly because other elements of <k_ele> are (mostly)
@@ -189,7 +198,7 @@ sub process_entry {
     $contents =~
       s!([\x80-\xFF])!<gaiji type=\"half\" name=\"$gaiji_table{$1}\">!g;
 
-    $kanji{$key} .= "$contents, ";
+    $kanji{join("\x00", $key, $ent_seq)} .= "$contents, ";
 
     # do some basic cleanup in romaji keys
     $romaji = $trans_det[$i];
@@ -201,11 +210,11 @@ sub process_entry {
 
     if (length($romaji) > 2 and length($romaji) < 50 and
 	$romaji !~ m/[0-9_><"({;:=?+]/) {
-      $rev{$romaji} .= "$key\x00";
+      $rev{join("\x00", $romaji, $ent_seq)} .= "$key\x00";
     }
   }
 
-  $kanji{$key} =~ s/, $/\x00/;
+  $kanji{join("\x00", $key, $ent_seq)} =~ s/, $/\x00/;
 }
 
 
@@ -215,11 +224,14 @@ sub register {
   my $cnt;
 
 
-  foreach my $key (sort keys %$hash) {
+  foreach my $keys (sort keys %$hash) {
     my (%dupl, $contents);
+    my @split_key = split("\x00", $keys);
+    my $key = $split_key[0];
+    my $ent_seq = $split_key[1];
 
     # ignore duplicates
-    foreach my $c (split '\x00', $$hash{$key}) {
+    foreach my $c (split '\x00', $$hash{$keys}) {
       if (!defined($dupl{$c}) ) {
         $dupl{$c} = 1;
       } else {
@@ -234,7 +246,7 @@ sub register {
     $key = jcode($key, 'utf8')->euc;
     $contents = jcode($contents, 'utf8')->euc;
 
-    print "$key : $contents\n" if $debug;
+    print STDERR "Registering [$ent_seq] $key : $contents\n" if $debug;
 
     $cnt++;
     FreePWING_write("<entry><heading>$key</heading><key name=\"$key\">" .

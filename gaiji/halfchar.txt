@@ -59,3 +59,4 @@ frac14		gaiji/halfchar/frac14-16h.xbm
 sup3		gaiji/halfchar/sup3-16h.xbm
 omacron		gaiji/halfchar/omacron-16h.xbm
 Omacron		gaiji/halfchar/Omacron-16h.xbm
+yacute          gaiji/halfchar/yacute-16h.xbm
